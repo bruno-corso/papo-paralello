@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Flex", sans-serif;
+}
+
+.nav .nav-link,
+.navbar-brand,
+.navbar-brand:hover {
+  color: #DCD7C9;
+}
+
+.navbar {
+  background-color: #2C3639;
+  border-bottom: 0.5px solid #DCD7C9;
+}
+.navbar .nav .nav-link.active {
+  background-color: #A27B5C;
+  color: #DCD7C9;
+}
+
+.navbar-brand {
+  font-weight: 300;
+  font-size: 2rem;
+  font-family: "Comic Neue", cursive;
+  margin: 0;
+}
+.navbar-brand img {
+  margin-right: 1rem;
+}
+
+.navbar-toggler {
+  background-color: #A27B5C;
+}
+
+section#sobre,
+section#programas {
+  background-color: #3F4E4F;
+  padding-top: 2rem;
+}
+
+.carousel {
+  width: 100%;
+}
+.carousel img {
+  width: 100%;
+  opacity: 0.5;
+  border-radius: 0;
+}
+.carousel-inner {
+  background-color: #000;
+  opacity: 0.9;
+  display: block;
+}
+
+#sobre .container h3,
+#podcast .container h3,
+#programas .container h3,
+#contato .container h3 {
+  font-weight: 700;
+  font-size: 2rem;
+  font-family: "Comic Neue", cursive;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #A27B5C;
+  color: #DCD7C9;
+}
+
+#sobre p {
+  text-align: justify;
+  font-size: 1.3rem;
+  padding: 0 1rem;
+  color: #DCD7C9;
+}
+#sobre .container {
+  margin-top: 2rem;
+}
+#sobre .container img {
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+}
+
+section#podcast {
+  background-color: #3b484d;
+  padding-top: 2rem;
+}
+
+.card {
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #008170;
+  border-radius: 5px;
+  align-items: center;
+  margin: 0;
+  text-align: center;
+}
+.card:hover {
+  transition: 0.4s;
+  translate: 0 -5px;
+}
+.card-body {
+  width: 100%;
+}
+
+#podcast .row p {
+  font-size: 1rem;
+  text-align: justify;
+  width: 100%;
+  opacity: 0.7;
+  line-height: 2rem;
+}
+#podcast a.btn {
+  background-color: #A27B5C;
+  border: none;
+  margin: 0;
+}
+#podcast a.btn:hover {
+  opacity: 0.7;
+}
+
+#veja-mais,
+a#veja-mais {
+  background-color: #008170;
+  color: #DCD7C9;
+  margin-top: 2rem;
+  border: none;
+  text-decoration: none;
+  padding: 1rem 0;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px #3b484d;
+  width: 50%;
+}
+#veja-mais:hover,
+a#veja-mais:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#programas p {
+  color: #DCD7C9;
+  font-size: 1.5rem;
+  text-align: justify;
+  opacity: 0.8;
+}
+#programas .nav-link.active {
+  background-color: #A27B5C;
+  color: #DCD7C9;
+}
+
+#redes-sociais {
+  font-weight: 700;
+  font-size: 2rem;
+  font-family: "Comic Neue", cursive;
+  padding-bottom: 1rem;
+  /* margin-bottom: 1.5rem; */
+  color: #DCD7C9;
+}
+
+section#contato {
+  background-color: #3b484d;
+}
+section#contato ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+section#contato li {
+  display: inline;
+  margin-right: 1rem;
+}
+section#contato a {
+  font-size: 2rem;
+  color: #DCD7C9;
+}
+section#contato span {
+  color: #A27B5C;
+}
+section#contato form label {
+  color: #DCD7C9;
+  font-family: "Comic Neue", cursive;
+  font-weight: 300;
+}
+section#contato form button {
+  background-color: #A27B5C;
+  color: #DCD7C9;
+  font-weight: 700;
+  font-family: "Comic Neue", cursive;
+  padding: 0.5rem 2rem;
+}
+
+footer {
+  background-color: #A27B5C;
+  color: #DCD7C9;
+}
+footer a {
+  background-color: #A27B5C;
+  color: #DCD7C9;
+}
+
+@media (max-width: 767px) {
+  .navbar-brand {
+    font-weight: 300;
+    font-size: 1.5rem;
+    font-family: "Comic Neue", cursive;
+    margin: 0;
+    align-items: center;
+  }
+  .navbar-brand img {
+    margin-right: 0.3rem;
+    width: 50px;
+    height: 45px;
+  }
+  #sobre .container h3,
+  #podcast .container h3,
+  #programas .container h3,
+  #contato .container h3 {
+    font-size: 1.5rem;
+  }
+  #sobre,
+  #podcast,
+  #programas,
+  #contato {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+  #sobre .container {
+    margin-top: 0;
+  }
+  #podcast #veja-mais {
+    width: 75%;
+  }
+  #programas p,
+  #sobre p {
+    font-size: 1rem;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

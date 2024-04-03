@@ -1,0 +1,292 @@
+@use './config/reset';
+@use './config/variaveis';
+$layout-breakpoint: 767px;
+
+body {
+    font-family: variaveis.$fonteConteudo;
+}
+
+.nav .nav-link,
+.navbar-brand,
+.navbar-brand:hover {
+    color: variaveis.$corClara;
+}
+
+.navbar {
+    background-color: variaveis.$corBgNavBar;
+    border-bottom: 0.5px solid variaveis.$corClara;
+
+    .nav {
+        .nav-link.active {
+            background-color: variaveis.$corDestaque;
+            color: variaveis.$corClara;
+            ;
+        }
+    }
+}
+
+.navbar-brand {
+    font-weight: 300;
+    font-size: 2rem;
+    font-family: variaveis.$fonteDestaque;
+    margin: 0;
+
+    img {
+        margin-right: 1rem;
+    }
+}
+
+.navbar-toggler {
+    background-color: variaveis.$corDestaque;
+}
+
+section#sobre,
+section#programas {
+    background-color: variaveis.$corBgEscuro1;
+    padding-top: 2rem;
+}
+
+.carousel {
+    width: 100%;
+
+    img {
+        width: 100%;
+        opacity: 0.5;
+        border-radius: 0;
+    }
+
+    &-inner {
+        background-color: #000;
+        opacity: 0.9;
+        display: block;
+    }
+}
+
+#sobre,
+#podcast,
+#programas,
+#contato {
+    .container {
+        h3 {
+            font-weight: 700;
+            font-size: 2rem;
+            font-family: variaveis.$fonteDestaque;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid variaveis.$corDestaque;
+            color: variaveis.$corClara;
+        }
+    }
+}
+
+#sobre {
+    p {
+        text-align: justify;
+        font-size: 1.3rem;
+        padding: 0 1rem;
+        color: variaveis.$corClara;
+    }
+
+    .container {
+        margin-top: 2rem;
+
+        img {
+            border-radius: 20px;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+        }
+    }
+}
+
+section#podcast {
+    background-color: variaveis.$corBgEscuro2;
+    padding-top: 2rem;
+}
+
+.card {
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid variaveis.$corBordas;
+    border-radius: 5px;
+    align-items: center;
+    margin: 0;
+    text-align: center;
+
+    &:hover {
+        transition: 0.4s;
+        translate: 0 -5px;
+    }
+
+    &-body {
+        width: 100%;
+    }
+}
+
+#podcast {
+    .row {
+        p {
+            font-size: 1rem;
+            text-align: justify;
+            width: 100%;
+            opacity: 0.7;
+            line-height: 2rem;
+        }
+    }
+
+    a.btn {
+        background-color: variaveis.$corDestaque;
+        border: none;
+        margin: 0;
+    }
+
+    a.btn:hover {
+        opacity: 0.7;
+    }
+}
+
+#veja-mais,
+a#veja-mais {
+    background-color: variaveis.$corBordas;
+    color: variaveis.$corClara;
+    margin-top: 2rem;
+    border: none;
+    text-decoration: none;
+    padding: 1rem 0;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px variaveis.$corBgEscuro2;
+    width: 50%;
+
+    &:hover {
+        opacity: 0.8;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+}
+
+#programas {
+    p {
+        color: variaveis.$corClara;
+        font-size: 1.5rem;
+        text-align: justify;
+        opacity: 0.8;
+    }
+
+    .nav {
+        &-link.active {
+            background-color: variaveis.$corDestaque;
+            color: variaveis.$corClara;
+        }
+    }
+}
+
+#redes-sociais {
+    font-weight: 700;
+    font-size: 2rem;
+    font-family: variaveis.$fonteDestaque;
+    padding-bottom: 1rem;
+    /* margin-bottom: 1.5rem; */
+    color: variaveis.$corClara;
+}
+
+section#contato {
+    background-color: variaveis.$corBgEscuro2;
+
+    ul {
+        list-style: none;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    li {
+        display: inline;
+        margin-right: 1rem;
+    }
+
+    a {
+        font-size: 2rem;
+        color: variaveis.$corClara;
+    }
+
+    span {
+        color: variaveis.$corDestaque;
+    }
+
+    form {
+        label {
+            color: variaveis.$corClara;
+            font-family: variaveis.$fonteDestaque;
+            font-weight: 300;
+        }
+
+        button {
+            background-color: variaveis.$corDestaque;
+            color: variaveis.$corClara;
+            font-weight: 700;
+            font-family: variaveis.$fonteDestaque;
+            padding: 0.5rem 2rem;
+        }
+    }
+}
+
+footer {
+    background-color: variaveis.$corDestaque;
+    color: variaveis.$corClara;
+
+    a {
+        background-color: variaveis.$corDestaque;
+        color: variaveis.$corClara;
+    }
+}
+
+@media (max-width: $layout-breakpoint) {
+    .navbar-brand {
+        font-weight: 300;
+        font-size: 1.5rem;
+        font-family: variaveis.$fonteDestaque;
+        margin: 0;
+        align-items: center;
+
+        img {
+            margin-right: 0.3rem;
+            width: 50px;
+            height: 45px;
+        }
+    }
+
+    #sobre,
+    #podcast,
+    #programas,
+    #contato {
+        .container {
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    #sobre,
+    #podcast,
+    #programas,
+    #contato {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+    }
+
+    #sobre .container {
+        margin-top: 0;
+    }
+
+    #podcast #veja-mais {
+        width: 75%;
+    }
+
+    #programas,
+    #sobre {
+        p {
+            font-size: 1rem;
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+}
