@@ -1,5 +1,6 @@
 @use './config/reset';
 @use './config/variaveis';
+@use './config/infinityScroll';
 $layout-breakpoint: 767px;
 
 body {
@@ -26,7 +27,7 @@ body {
 }
 
 .navbar-brand {
-    font-weight: 300;
+    font-weight: 700;
     font-size: 2rem;
     font-family: variaveis.$fonteDestaque;
     margin: 0;
