@@ -119,7 +119,7 @@ body {
 }
 
 .navbar {
-  background-color: #174f60;
+  background-color: #2e4239;
   border-bottom: 0.5px solid #D3D3D3;
 }
 .navbar .nav .nav-link.active {
@@ -174,11 +174,15 @@ section#programas {
   color: #D3D3D3;
 }
 
-#sobre p {
+#sobre p,
+#sobre span {
   text-align: justify;
   font-size: 1.3rem;
   padding: 0 1rem;
   color: #D3D3D3;
+}
+#sobre span {
+  text-decoration: underline;
 }
 #sobre .container {
   margin-top: 2rem;
@@ -187,6 +191,20 @@ section#programas {
   border-radius: 20px;
   margin-bottom: 2rem;
   opacity: 0.8;
+}
+#sobre ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 1rem;
+  width: 100%;
+}
+#sobre li {
+  display: inline;
+  margin-right: 1.5rem;
+}
+#sobre a {
+  font-size: 3rem;
+  color: #D3D3D3;
 }
 
 section#podcast {
@@ -197,7 +215,7 @@ section#podcast {
 .card {
   color: #fff;
   background-color: transparent;
-  border: 2px solid #008170;
+  border: 2px solid #3c594c;
   border-radius: 5px;
   align-items: center;
   margin: 0;
@@ -229,7 +247,8 @@ section#podcast {
 
 #veja-mais,
 a#veja-mais {
-  background-color: #008170;
+  background-color: #2e4239;
+  filter: brightness(0.9);
   color: #D3D3D3;
   margin-top: 2rem;
   border: none;
@@ -237,8 +256,8 @@ a#veja-mais {
   padding: 1rem 0;
   text-align: center;
   border-radius: 5px;
-  box-shadow: 2px 2px 4px #385045;
-  width: 50%;
+  box-shadow: 2px 2px 4px #222;
+  width: 35%;
 }
 #veja-mais:hover,
 a#veja-mais:hover {
@@ -256,6 +275,9 @@ a#veja-mais:hover {
 #programas .nav-link.active {
   background-color: #b88608;
   color: #D3D3D3;
+}
+#programas aside {
+  border-right: 1px solid #2e4239;
 }
 
 #redes-sociais {
@@ -300,11 +322,11 @@ section#contato form button {
 }
 
 footer {
-  background-color: #b88608;
+  background-color: #2e4239;
   color: #D3D3D3;
 }
 footer a {
-  background-color: #b88608;
+  background-color: #3c594c;
   color: #D3D3D3;
 }
 
@@ -341,10 +363,20 @@ footer a {
     width: 75%;
   }
   #programas p,
-  #sobre p {
+  #programas span,
+  #sobre p,
+  #sobre span {
     font-size: 1rem;
     padding-right: 0;
     padding-left: 0;
+  }
+  #programas ul,
+  #sobre ul {
+    padding: 0;
+  }
+  #programas aside,
+  #sobre aside {
+    border-right: none;
   }
 }
 
