@@ -81,11 +81,17 @@ section#programas {
 }
 
 #sobre {
-    p {
+
+    p,
+    span {
         text-align: justify;
         font-size: 1.3rem;
         padding: 0 1rem;
         color: variaveis.$corClara;
+    }
+
+    span {
+        text-decoration: underline;
     }
 
     .container {
@@ -96,6 +102,23 @@ section#programas {
             margin-bottom: 2rem;
             opacity: 0.8;
         }
+    }
+
+    ul {
+        list-style: none;
+        margin-left: 0;
+        padding-left: 1rem;
+        width: 100%;
+    }
+
+    li {
+        display: inline;
+        margin-right: 1.5rem;
+    }
+
+    a {
+        font-size: 3rem;
+        color: variaveis.$corClara;
     }
 }
 
@@ -147,7 +170,8 @@ section#podcast {
 
 #veja-mais,
 a#veja-mais {
-    background-color: variaveis.$corBordas;
+    background-color: variaveis.$corBgNavBar;
+    filter: brightness(0.9);
     color: variaveis.$corClara;
     margin-top: 2rem;
     border: none;
@@ -155,8 +179,8 @@ a#veja-mais {
     padding: 1rem 0;
     text-align: center;
     border-radius: 5px;
-    box-shadow: 2px 2px 4px variaveis.$corBgEscuro2;
-    width: 50%;
+    box-shadow: 2px 2px 4px #222;
+    width: 35%;
 
     &:hover {
         opacity: 0.8;
@@ -178,6 +202,10 @@ a#veja-mais {
             background-color: variaveis.$corDestaque;
             color: variaveis.$corClara;
         }
+    }
+
+    aside {
+        border-right: 1px solid variaveis.$corBgNavBar;
     }
 }
 
@@ -231,11 +259,11 @@ section#contato {
 }
 
 footer {
-    background-color: variaveis.$corDestaque;
+    background-color: variaveis.$corBgNavBar;
     color: variaveis.$corClara;
 
     a {
-        background-color: variaveis.$corDestaque;
+        background-color: variaveis.$corBgEscuro1;
         color: variaveis.$corClara;
     }
 }
@@ -284,10 +312,21 @@ footer {
 
     #programas,
     #sobre {
-        p {
+
+        p,
+        span {
             font-size: 1rem;
             padding-right: 0;
             padding-left: 0;
         }
+
+        ul {
+            padding: 0;
+        }
+
+        aside {
+            border-right: none;
+        }
     }
+
 }
