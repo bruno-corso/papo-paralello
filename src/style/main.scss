@@ -190,9 +190,19 @@ a#veja-mais {
 }
 
 #programas {
+
+    .subprograma {
+        margin-top: 2rem;
+        border-bottom: 2px solid variaveis.$corClara;
+
+        &__first{
+            margin-top: 0;
+        }
+    }
+
     p {
         color: variaveis.$corClara;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         text-align: justify;
         opacity: 0.8;
     }
@@ -207,6 +217,7 @@ a#veja-mais {
     aside {
         border-right: 1px solid variaveis.$corBgNavBar;
     }
+
 }
 
 #redes-sociais {

@@ -266,9 +266,16 @@ a#veja-mais:hover {
   cursor: pointer;
 }
 
+#programas .subprograma {
+  margin-top: 2rem;
+  border-bottom: 2px solid #D3D3D3;
+}
+#programas .subprograma__first {
+  margin-top: 0;
+}
 #programas p {
   color: #D3D3D3;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-align: justify;
   opacity: 0.8;
 }
