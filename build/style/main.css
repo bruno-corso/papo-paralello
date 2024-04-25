@@ -1,0 +1,351 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --marquee-width: 100vw;
+  --marquee-height: 50px;
+  /* --marquee-elements: 12; */
+  /* defined with JavaScript */
+  --marquee-elements-displayed: 4;
+  --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+  --marquee-animation-duration: calc(var(--marquee-elements) * 7s);
+}
+
+.marquee {
+  width: var(--marquee-width);
+  height: var(--marquee-height);
+  background-color: #333;
+  color: #eee;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee:before,
+.marquee:after {
+  position: absolute;
+  top: 0;
+  width: 10rem;
+  height: 100%;
+  content: "";
+  z-index: 1;
+}
+
+.marquee:before {
+  left: 0;
+  background: linear-gradient(to right, #111 0%, transparent 100%);
+}
+
+.marquee:after {
+  right: 0;
+  background: linear-gradient(to left, #111 0%, transparent 100%);
+}
+
+.marquee-content {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  animation: scrolling var(--marquee-animation-duration) linear infinite;
+}
+
+/* .marquee-content:hover {
+    animation-play-state: paused;
+  } */
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements)));
+  }
+}
+.marquee-content li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+  flex-shrink: 0;
+  width: var(--marquee-element-width);
+  max-height: 100%;
+  font-size: calc(var(--marquee-height) * 3 / 4);
+  /* 5rem; */
+  white-space: nowrap;
+}
+
+.marquee-content li img {
+  width: 100%;
+  /* height: 100%; */
+  border: 2px solid #eee;
+}
+
+@media (max-width: 1023px) {
+  html {
+    font-size: 12px;
+  }
+  :root {
+    --marquee-width: 100vw;
+    --marquee-height: 40px;
+    --marquee-elements-displayed: 3;
+  }
+  .marquee:before,
+  .marquee:after {
+    width: 5rem;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+  :root {
+    --marquee-width: 100vw;
+    --marquee-height: 40px;
+    --marquee-elements-displayed: 1.2;
+  }
+  .marquee:before,
+  .marquee:after {
+    width: 5rem;
+  }
+}
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.nav .nav-link,
+.navbar-brand,
+.navbar-brand:hover {
+  color: #D3D3D3;
+}
+
+.navbar {
+  background-color: #174f60;
+  border-bottom: 0.5px solid #D3D3D3;
+}
+.navbar .nav .nav-link.active {
+  background-color: #b88608;
+  color: #D3D3D3;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 2rem;
+  font-family: "League Spartan", sans-serif;
+  margin: 0;
+}
+.navbar-brand img {
+  margin-right: 1rem;
+}
+
+.navbar-toggler {
+  background-color: #b88608;
+}
+
+section#sobre,
+section#programas {
+  background-color: #3c594c;
+  padding-top: 2rem;
+}
+
+.carousel {
+  width: 100%;
+}
+.carousel img {
+  width: 100%;
+  opacity: 0.5;
+  border-radius: 0;
+}
+.carousel-inner {
+  background-color: #000;
+  opacity: 0.9;
+  display: block;
+}
+
+#sobre .container h3,
+#podcast .container h3,
+#programas .container h3,
+#contato .container h3 {
+  font-weight: 700;
+  font-size: 2rem;
+  font-family: "League Spartan", sans-serif;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #b88608;
+  color: #D3D3D3;
+}
+
+#sobre p {
+  text-align: justify;
+  font-size: 1.3rem;
+  padding: 0 1rem;
+  color: #D3D3D3;
+}
+#sobre .container {
+  margin-top: 2rem;
+}
+#sobre .container img {
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+}
+
+section#podcast {
+  background-color: #385045;
+  padding-top: 2rem;
+}
+
+.card {
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #008170;
+  border-radius: 5px;
+  align-items: center;
+  margin: 0;
+  text-align: center;
+}
+.card:hover {
+  transition: 0.4s;
+  translate: 0 -5px;
+}
+.card-body {
+  width: 100%;
+}
+
+#podcast .row p {
+  font-size: 1rem;
+  text-align: justify;
+  width: 100%;
+  opacity: 0.7;
+  line-height: 2rem;
+}
+#podcast a.btn {
+  background-color: #b88608;
+  border: none;
+  margin: 0;
+}
+#podcast a.btn:hover {
+  opacity: 0.7;
+}
+
+#veja-mais,
+a#veja-mais {
+  background-color: #008170;
+  color: #D3D3D3;
+  margin-top: 2rem;
+  border: none;
+  text-decoration: none;
+  padding: 1rem 0;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px #385045;
+  width: 50%;
+}
+#veja-mais:hover,
+a#veja-mais:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#programas p {
+  color: #D3D3D3;
+  font-size: 1.5rem;
+  text-align: justify;
+  opacity: 0.8;
+}
+#programas .nav-link.active {
+  background-color: #b88608;
+  color: #D3D3D3;
+}
+
+#redes-sociais {
+  font-weight: 700;
+  font-size: 2rem;
+  font-family: "League Spartan", sans-serif;
+  padding-bottom: 1rem;
+  /* margin-bottom: 1.5rem; */
+  color: #D3D3D3;
+}
+
+section#contato {
+  background-color: #385045;
+}
+section#contato ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+section#contato li {
+  display: inline;
+  margin-right: 1rem;
+}
+section#contato a {
+  font-size: 2rem;
+  color: #D3D3D3;
+}
+section#contato span {
+  color: #b88608;
+}
+section#contato form label {
+  color: #D3D3D3;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 300;
+}
+section#contato form button {
+  background-color: #b88608;
+  color: #D3D3D3;
+  font-weight: 700;
+  font-family: "League Spartan", sans-serif;
+  padding: 0.5rem 2rem;
+}
+
+footer {
+  background-color: #b88608;
+  color: #D3D3D3;
+}
+footer a {
+  background-color: #b88608;
+  color: #D3D3D3;
+}
+
+@media (max-width: 767px) {
+  .navbar-brand {
+    font-weight: 300;
+    font-size: 1.5rem;
+    font-family: "League Spartan", sans-serif;
+    margin: 0;
+    align-items: center;
+  }
+  .navbar-brand img {
+    margin-right: 0.3rem;
+    width: 50px;
+    height: 45px;
+  }
+  #sobre .container h3,
+  #podcast .container h3,
+  #programas .container h3,
+  #contato .container h3 {
+    font-size: 1.5rem;
+  }
+  #sobre,
+  #podcast,
+  #programas,
+  #contato {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+  #sobre .container {
+    margin-top: 0;
+  }
+  #podcast #veja-mais {
+    width: 75%;
+  }
+  #programas p,
+  #sobre p {
+    font-size: 1rem;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
