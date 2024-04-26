@@ -5,7 +5,10 @@ $layout-breakpoint: 767px;
 
 body {
     font-family: variaveis.$fonteConteudo;
+    color: variaveis.$corClara;
 }
+
+
 
 .nav .nav-link,
 .navbar-brand,
@@ -223,7 +226,6 @@ a#veja-mais {
 
 }
 
-
 #redes-sociais {
     font-weight: 700;
     font-size: 2rem;
@@ -328,7 +330,7 @@ footer {
 
         p,
         span {
-            font-size: 1rem;
+            font-size: 1.25rem;
             padding-right: 0;
             padding-left: 0;
         }
@@ -339,7 +341,12 @@ footer {
 
         aside {
             border-right: none;
+            font-size: 1.5rem;
         }
+    }
+
+    label{
+        font-size: 1.25rem;
     }
 
     #apoio .d-flex{

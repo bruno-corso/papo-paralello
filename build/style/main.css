@@ -107,6 +107,7 @@
 }
 body {
   font-family: "Ubuntu", sans-serif;
+  color: #D3D3D3;
 }
 
 .nav .nav-link,
@@ -368,7 +369,7 @@ footer a {
   #programas span,
   #sobre p,
   #sobre span {
-    font-size: 1rem;
+    font-size: 1.25rem;
     padding-right: 0;
     padding-left: 0;
   }
@@ -379,6 +380,10 @@ footer a {
   #programas aside,
   #sobre aside {
     border-right: none;
+    font-size: 1.5rem;
+  }
+  label {
+    font-size: 1.25rem;
   }
   #apoio .d-flex {
     flex-direction: column;
