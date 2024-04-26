@@ -42,7 +42,8 @@ body {
 }
 
 section#sobre,
-section#programas {
+section#programas,
+section#contato {
     background-color: variaveis.$corBgEscuro1;
     padding-top: 2rem;
 }
@@ -66,7 +67,8 @@ section#programas {
 #sobre,
 #podcast,
 #programas,
-#contato {
+#contato,
+#apoio {
     .container {
         h3 {
             font-weight: 700;
@@ -98,9 +100,9 @@ section#programas {
         margin-top: 2rem;
 
         img {
-            border-radius: 20px;
+            // border-radius: 20px;
             margin-bottom: 2rem;
-            opacity: 0.8;
+            // opacity: 0.9;
         }
     }
 
@@ -122,7 +124,8 @@ section#programas {
     }
 }
 
-section#podcast {
+section#podcast,
+section#apoio {
     background-color: variaveis.$corBgEscuro2;
     padding-top: 2rem;
 }
@@ -195,7 +198,7 @@ a#veja-mais {
         margin-top: 2rem;
         border-bottom: 2px solid variaveis.$corClara;
 
-        &__first{
+        &__first {
             margin-top: 0;
         }
     }
@@ -220,6 +223,7 @@ a#veja-mais {
 
 }
 
+
 #redes-sociais {
     font-weight: 700;
     font-size: 2rem;
@@ -230,8 +234,6 @@ a#veja-mais {
 }
 
 section#contato {
-    background-color: variaveis.$corBgEscuro2;
-
     ul {
         list-style: none;
         margin-left: 0;
@@ -338,6 +340,11 @@ footer {
         aside {
             border-right: none;
         }
+    }
+
+    #apoio .d-flex{
+        flex-direction: column;
+        gap: 20px;
     }
 
 }
