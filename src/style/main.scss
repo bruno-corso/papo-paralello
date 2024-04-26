@@ -224,7 +224,15 @@ a#veja-mais {
         border-right: 1px solid variaveis.$corBgNavBar;
     }
 
+
+    .fotos-programas > img{
+        width: 30%;
+        border: 1px solid transparent; /* Define a largura da borda e a torna transparente */
+        border-radius: 10px; /* Adiciona cantos arredondados à borda */
+        // filter: blur(10px);
+    }
 }
+
 
 #redes-sociais {
     font-weight: 700;
@@ -330,7 +338,7 @@ footer {
 
         p,
         span {
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             padding-right: 0;
             padding-left: 0;
         }
@@ -349,9 +357,13 @@ footer {
         font-size: 1.25rem;
     }
 
-    #apoio .d-flex{
+    #apoio .d-flex, .fotos-programas{
         flex-direction: column;
         gap: 20px;
+    }
+
+    #programas .fotos-programas > img{
+        width: 75%;
     }
 
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -285,6 +286,11 @@ a#veja-mais:hover {
 #programas aside {
   border-right: 1px solid #2e4239;
 }
+#programas .fotos-programas > img {
+  width: 30%;
+  border: 1px solid transparent; /* Define a largura da borda e a torna transparente */
+  border-radius: 10px; /* Adiciona cantos arredondados à borda */
+}
 
 #redes-sociais {
   font-weight: 700;
@@ -369,7 +375,7 @@ footer a {
   #programas span,
   #sobre p,
   #sobre span {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     padding-right: 0;
     padding-left: 0;
   }
@@ -385,9 +391,12 @@ footer a {
   label {
     font-size: 1.25rem;
   }
-  #apoio .d-flex {
+  #apoio .d-flex, .fotos-programas {
     flex-direction: column;
     gap: 20px;
+  }
+  #programas .fotos-programas > img {
+    width: 75%;
   }
 }
 
