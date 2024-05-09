@@ -87,11 +87,20 @@
                     </li>
                 </ul>
             </nav>
-            
+
         </div>
     </header>
     <div class="corpo" data-bs-spy="scroll" data-bs-target="cabecalho">
-        
+        <section id="inicio" class="d-flex">
+            <div id="inicioContainer" class="container d-flex justify-content-around">
+                <div class="texto col-md-8 col-sm-12">
+                    <h2 class="">Somos o Podcast do Mundo Psytrance</h2>
+                    <p>Vamos falar e mostrar de tudo da nossa cena.</p>
+                    <button id="botao-inicio">Saiba mais</button>
+                </div>
+                <img class="col-md-4 col-sm-12" src="./src/imgs/logo_papo_branco.png" alt="logo papo paralello">
+            </div>
+        </section>
         <div class="carousel slide" data-bs-ride="carousel" id="carousel">
             <div class="carousel-inner">
                 <div data-bs-interval="4000" class="carousel-item active">
@@ -389,6 +398,14 @@
                                 <span>Reveilloz </span>
                                 <!-- <img src="https://www.placehold.co/100x50" alt=""> -->
                             </li>
+                            <li>
+                                <span>Ultra Brasil </span>
+                                <!-- <img src="https://www.placehold.co/100x50" alt=""> -->
+                            </li>
+                            <li>
+                                <span>Hitech Revolution </span>
+                                <!-- <img src="https://www.placehold.co/100x50" alt=""> -->
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -455,6 +472,12 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        const inicio = document.getElementById('inicioContainer');
+
+        window.addEventListener('load', function () {
+            inicio.classList.add('aparecer');
+        });
+
         const linksAnchor = document.querySelectorAll('a[href^="#"]');
         for (const link of linksAnchor) {
             link.addEventListener('click', (event) => {
@@ -469,6 +492,28 @@
                 });
             });
         }
+
+        const botaoSaibaMais = document.getElementById('botao-inicio')
+        const alturaSobre = (document.getElementById('sobre').offsetHeight);
+        botaoSaibaMais.addEventListener('click', (e) => {
+            e.preventDefault();
+            console.log(botaoSaibaMais.offsetHeight);
+            window.scrollTo({
+                top: document.getElementById('sobre').offsetTop - document.querySelector('.navbar').offsetHeight,
+                behavior: "smooth",
+            });
+        })
+
+        const logoBrand = document.querySelector('.navbar-brand')
+        logoBrand.addEventListener('click', (e) => {
+            e.preventDefault();
+            console.log(botaoSaibaMais.offsetHeight);
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        })
+
     </script>
     <script>
         const root = document.documentElement;
