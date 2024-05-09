@@ -371,7 +371,7 @@ footer {
 
 @media (max-width: $layout-breakpoint) {
     .navbar-brand {
-        font-weight: 300;
+        font-weight: 700;
         font-size: 1.5rem;
         font-family: variaveis.$fonteDestaque;
         margin: 0;
@@ -463,11 +463,34 @@ footer {
     }
 
 
-    #inicioContainer{
-        flex-direction: column;
+    section#inicio {
+        .container {
+            // margin-top: 2rem;
+            text-align: center;
+            color: variaveis.$corClara;
+            font-family: variaveis.$fonteDestaque;
+            opacity: 0;
+            transition: opacity 2s ease-in;
+        }
 
-        img{
-            width: 100%;
+        .container.aparecer {
+            opacity: 1;
+            flex-direction: column;
+        }
+
+        h2 {
+            font-size: 40px;
+            font-weight: 700;
+        }
+
+        p {
+            margin: 2rem 0;
+            color: variaveis.$corDestaque;
+            font-size: 20px;
+        }
+
+        img {
+            width: 300px;
         }
     }
 
