@@ -7,7 +7,7 @@
 
 :root {
   --marquee-width: 100%;
-  --marquee-height: 80px;
+  --marquee-height: 60px;
   /* --marquee-elements: 12; */
   /* defined with JavaScript */
   --marquee-elements-displayed: 4;
@@ -61,6 +61,8 @@
   max-height: 100%;
   /* 5rem; */
   white-space: nowrap;
+  font-size: 1.25rem;
+  text-transform: uppercase;
 }
 .marquee-content li img {
   /* height: 100%; */
@@ -79,8 +81,8 @@
   }
 }
 @media (max-width: 1023px) {
-  html {
-    font-size: 12px;
+  li span {
+    font-size: 24px;
   }
   :root {
     --marquee-width: 100%;
@@ -93,12 +95,12 @@
   }
 }
 @media (max-width: 600px) {
-  html {
-    font-size: 12px;
+  li span {
+    font-size: 20px;
   }
   :root {
     --marquee-width: 100%;
-    --marquee-height: 80px;
+    --marquee-height: 60px;
     --marquee-elements-displayed: 1.2;
   }
   .marquee:before,
@@ -138,6 +140,65 @@ body {
 
 .navbar-toggler {
   background-color: #b88608;
+}
+
+.logo-midias {
+  display: flex;
+  align-items: center;
+}
+.logo-midias ul {
+  list-style: none;
+  padding-left: 2rem;
+  margin-bottom: 0;
+}
+.logo-midias ul li {
+  display: inline;
+  margin-right: 1.5rem;
+}
+.logo-midias ul li a {
+  font-size: 1.5rem;
+  color: #b88608;
+}
+
+section#inicio {
+  margin: 0;
+  width: 100vw;
+  height: calc(100vh - 100px);
+  background-color: #2e4239;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%239C92AC' fill-opacity='0.05' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+section#inicio .container {
+  align-items: center;
+  color: #D3D3D3;
+  font-family: "League Spartan", sans-serif;
+  opacity: 0;
+  transition: opacity 2s ease-in;
+}
+section#inicio .container.aparecer {
+  opacity: 1;
+}
+section#inicio h2 {
+  font-size: 64px;
+  font-weight: 700;
+}
+section#inicio p {
+  margin-top: 2rem;
+  color: #b88608;
+  font-size: 32px;
+}
+section#inicio button {
+  border-radius: 20px;
+  border: none;
+  box-shadow: 2px 2px 4px #333;
+  background-color: #b88608;
+  color: #fff;
+  font-weight: 700;
+  padding: 0.5rem 2rem;
+}
+section#inicio button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 section#sobre,
@@ -288,8 +349,10 @@ a#veja-mais:hover {
 }
 #programas .fotos-programas > img {
   width: 30%;
-  border: 1px solid transparent; /* Define a largura da borda e a torna transparente */
-  border-radius: 10px; /* Adiciona cantos arredondados à borda */
+  border: 1px solid transparent;
+  /* Define a largura da borda e a torna transparente */
+  border-radius: 10px;
+  /* Adiciona cantos arredondados à borda */
 }
 
 #redes-sociais {
@@ -299,6 +362,10 @@ a#veja-mais:hover {
   padding-bottom: 1rem;
   /* margin-bottom: 1.5rem; */
   color: #D3D3D3;
+}
+
+#patrocinadores img {
+  width: 20%;
 }
 
 section#contato ul {
@@ -352,6 +419,13 @@ footer a {
     width: 50px;
     height: 45px;
   }
+  .logo-midias {
+    flex-direction: column;
+    align-items: start;
+  }
+  .logo-midias ul {
+    padding-left: 10px;
+  }
   #sobre .container h3,
   #podcast .container h3,
   #programas .container h3,
@@ -375,9 +449,13 @@ footer a {
   #programas span,
   #sobre p,
   #sobre span {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     padding-right: 0;
     padding-left: 0;
+  }
+  #programas button,
+  #sobre button {
+    font-size: 1rem;
   }
   #programas ul,
   #sobre ul {
@@ -391,12 +469,27 @@ footer a {
   label {
     font-size: 1.25rem;
   }
-  #apoio .d-flex, .fotos-programas {
+  #apoio .d-flex,
+  .fotos-programas {
     flex-direction: column;
     gap: 20px;
   }
+  #patrocinadores img {
+    width: 50%;
+  }
   #programas .fotos-programas > img {
     width: 75%;
+  }
+  #inicioContainer {
+    flex-direction: column;
+  }
+  #inicioContainer img {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 990px) and (max-width: 1400px) {
+  .logo-midias {
+    flex-direction: column;
   }
 }
 
