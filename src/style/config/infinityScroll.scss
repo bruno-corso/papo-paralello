@@ -2,7 +2,7 @@
 
 :root {
     --marquee-width: 100%;
-    --marquee-height: 80px;
+    --marquee-height: 60px;
     /* --marquee-elements: 12; */
     /* defined with JavaScript */
     --marquee-elements-displayed: 4;
@@ -57,6 +57,8 @@
         // font-size: calc(var(--marquee-height)*3/4);
         /* 5rem; */
         white-space: nowrap;
+        font-size: 1.25rem;
+        text-transform: uppercase;
 
 
         img {
@@ -81,8 +83,8 @@
 }
 
 @media (max-width: 1023px) {
-    html {
-        font-size: 12px;
+    li span {
+        font-size: 24px;
     }
 
     :root {
@@ -98,7 +100,7 @@
 }
 
 @media (max-width: 600px) {
-    html {
+    li span {
         font-size: 12px;
     }
 

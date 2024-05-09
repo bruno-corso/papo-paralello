@@ -243,6 +243,10 @@ a#veja-mais {
     color: variaveis.$corClara;
 }
 
+#patrocinadores img {
+    width: 20%;
+}
+
 section#contato {
     ul {
         list-style: none;
@@ -360,6 +364,10 @@ footer {
     #apoio .d-flex, .fotos-programas{
         flex-direction: column;
         gap: 20px;
+    }
+
+    #patrocinadores img {
+        width: 50%;
     }
 
     #programas .fotos-programas > img{
