@@ -96,11 +96,11 @@
 }
 @media (max-width: 600px) {
   li span {
-    font-size: 12px;
+    font-size: 20px;
   }
   :root {
     --marquee-width: 100%;
-    --marquee-height: 80px;
+    --marquee-height: 60px;
     --marquee-elements-displayed: 1.2;
   }
   .marquee:before,
@@ -140,6 +140,24 @@ body {
 
 .navbar-toggler {
   background-color: #b88608;
+}
+
+.logo-midias {
+  display: flex;
+  align-items: center;
+}
+.logo-midias ul {
+  list-style: none;
+  padding-left: 2rem;
+  margin-bottom: 0;
+}
+.logo-midias ul li {
+  display: inline;
+  margin-right: 1.5rem;
+}
+.logo-midias ul li a {
+  font-size: 1.5rem;
+  color: #b88608;
 }
 
 section#sobre,
@@ -290,8 +308,10 @@ a#veja-mais:hover {
 }
 #programas .fotos-programas > img {
   width: 30%;
-  border: 1px solid transparent; /* Define a largura da borda e a torna transparente */
-  border-radius: 10px; /* Adiciona cantos arredondados à borda */
+  border: 1px solid transparent;
+  /* Define a largura da borda e a torna transparente */
+  border-radius: 10px;
+  /* Adiciona cantos arredondados à borda */
 }
 
 #redes-sociais {
@@ -358,6 +378,13 @@ footer a {
     width: 50px;
     height: 45px;
   }
+  .logo-midias {
+    flex-direction: column;
+    align-items: start;
+  }
+  .logo-midias ul {
+    padding-left: 10px;
+  }
   #sobre .container h3,
   #podcast .container h3,
   #programas .container h3,
@@ -381,9 +408,13 @@ footer a {
   #programas span,
   #sobre p,
   #sobre span {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     padding-right: 0;
     padding-left: 0;
+  }
+  #programas button,
+  #sobre button {
+    font-size: 1rem;
   }
   #programas ul,
   #sobre ul {
@@ -397,7 +428,8 @@ footer a {
   label {
     font-size: 1.25rem;
   }
-  #apoio .d-flex, .fotos-programas {
+  #apoio .d-flex,
+  .fotos-programas {
     flex-direction: column;
     gap: 20px;
   }

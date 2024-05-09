@@ -24,7 +24,6 @@ body {
         .nav-link.active {
             background-color: variaveis.$corDestaque;
             color: variaveis.$corClara;
-            ;
         }
     }
 }
@@ -43,6 +42,29 @@ body {
 .navbar-toggler {
     background-color: variaveis.$corDestaque;
 }
+
+.logo-midias {
+    display: flex;
+    align-items: center;
+
+    ul {
+        list-style: none;
+        padding-left: 2rem;
+        margin-bottom: 0;
+
+        li {
+            display: inline;
+            margin-right: 1.5rem;
+
+            a {
+                font-size: 1.5rem;
+                color: variaveis.$corDestaque;
+            }
+        }
+    }
+}
+
+
 
 section#sobre,
 section#programas,
@@ -225,10 +247,12 @@ a#veja-mais {
     }
 
 
-    .fotos-programas > img{
+    .fotos-programas>img {
         width: 30%;
-        border: 1px solid transparent; /* Define a largura da borda e a torna transparente */
-        border-radius: 10px; /* Adiciona cantos arredondados à borda */
+        border: 1px solid transparent;
+        /* Define a largura da borda e a torna transparente */
+        border-radius: 10px;
+        /* Adiciona cantos arredondados à borda */
         // filter: blur(10px);
     }
 }
@@ -310,6 +334,15 @@ footer {
         }
     }
 
+    .logo-midias {
+        flex-direction: column;
+        align-items: start;
+
+        ul {
+            padding-left: 10px;
+        }
+    }
+
     #sobre,
     #podcast,
     #programas,
@@ -342,9 +375,13 @@ footer {
 
         p,
         span {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             padding-right: 0;
             padding-left: 0;
+        }
+
+        button {
+            font-size: 1rem;
         }
 
         ul {
@@ -357,11 +394,12 @@ footer {
         }
     }
 
-    label{
+    label {
         font-size: 1.25rem;
     }
 
-    #apoio .d-flex, .fotos-programas{
+    #apoio .d-flex,
+    .fotos-programas {
         flex-direction: column;
         gap: 20px;
     }
@@ -370,8 +408,10 @@ footer {
         width: 50%;
     }
 
-    #programas .fotos-programas > img{
+    #programas .fotos-programas>img {
         width: 75%;
     }
+
+
 
 }

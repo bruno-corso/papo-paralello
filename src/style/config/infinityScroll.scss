@@ -101,12 +101,12 @@
 
 @media (max-width: 600px) {
     li span {
-        font-size: 12px;
+        font-size: 20px;
     }
 
     :root {
         --marquee-width: 100%;
-        --marquee-height: 80px;
+        --marquee-height: 60px;
         --marquee-elements-displayed: 1.2;
     }
 
