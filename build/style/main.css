@@ -408,7 +408,7 @@ footer a {
 
 @media (max-width: 767px) {
   .navbar-brand {
-    font-weight: 300;
+    font-weight: 700;
     font-size: 1.5rem;
     font-family: "League Spartan", sans-serif;
     margin: 0;
@@ -480,11 +480,28 @@ footer a {
   #programas .fotos-programas > img {
     width: 75%;
   }
-  #inicioContainer {
+  section#inicio .container {
+    text-align: center;
+    color: #D3D3D3;
+    font-family: "League Spartan", sans-serif;
+    opacity: 0;
+    transition: opacity 2s ease-in;
+  }
+  section#inicio .container.aparecer {
+    opacity: 1;
     flex-direction: column;
   }
-  #inicioContainer img {
-    width: 100%;
+  section#inicio h2 {
+    font-size: 40px;
+    font-weight: 700;
+  }
+  section#inicio p {
+    margin: 2rem 0;
+    color: #b88608;
+    font-size: 20px;
+  }
+  section#inicio img {
+    width: 300px;
   }
 }
 @media screen and (min-width: 990px) and (max-width: 1400px) {
