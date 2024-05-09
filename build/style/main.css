@@ -505,8 +505,25 @@ footer a {
   }
 }
 @media screen and (min-width: 990px) and (max-width: 1400px) {
+  a.nav-link {
+    padding: 0.5rem;
+  }
   .logo-midias {
-    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+  .logo-midias ul {
+    list-style: none;
+    padding-left: 1.5rem;
+    margin-bottom: 0;
+  }
+  .logo-midias ul li {
+    display: inline;
+    margin-right: 0.75rem;
+  }
+  .logo-midias ul li a {
+    font-size: 1rem;
+    color: #b88608;
   }
 }
 
