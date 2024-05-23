@@ -418,22 +418,22 @@
                 </div>
                 <div class="row gx-5 gy-5">
                     <div class="col-md-7">
-                        <form>
+                        <form id="form-contato">
                             <div>
-                                <label class="mb-2 mt-0" for="nome">Seu nome</label>
-                                <input required type="text" class="form-control" name="nome" id="nome">
+                                <label class="mb-2 mt-0" for="contact_name">Seu nome</label>
+                                <input required type="text" class="form-control" name="contact_name" id="nome">
                             </div>
                             <div>
-                                <label class="mb-2 mt-2" for="email">Seu email</label>
-                                <input required type="email" class="form-control" name="email" id="email">
+                                <label class="mb-2 mt-2" for="contact_email">Seu email</label>
+                                <input required type="email" class="form-control" name="contact_email" id="email">
                             </div>
                             <div>
-                                <label class="mb-2 mt-2" for="tel">Seu telefon</label>
-                                <input required type="tel" class="form-control" name="tel" id="tel">
+                                <label class="mb-2 mt-2" for="contact_number">Seu telefone</label>
+                                <input required type="tel" class="form-control" name="contact_number" id="tel">
                             </div>
                             <div>
-                                <label class="mb-2 mt-2" for="msg">Sua Mensagem</label>
-                                <textarea class="form-control" name="msg" id="msg" cols="20" rows="5"></textarea>
+                                <label class="mb-2 mt-2" for="contact_message">Sua Mensagem</label>
+                                <textarea class="form-control" name="contact_message" id="msg" cols="20" rows="5"></textarea>
                             </div>
                             <button type="submit" class="btn mt-3">Enviar</button>
                         </form>
@@ -526,6 +526,9 @@
             marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
         }
     </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script src="./src/main.js"></script>
 </body>
 
 </html>
