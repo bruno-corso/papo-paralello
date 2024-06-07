@@ -1,167 +1,237 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Papo Paralello</title>
+		<link rel="icon" href="./src/imgs/logo_papo.ico" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+		/>
+		<link rel="stylesheet" href="./build/style/main.css" />
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Papo Paralello</title>
-    <link rel="icon" href="./src/imgs/logo_papo.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="./build/style/main.css">
-</head>
-
-<body>
-    <header id="cabecalho" class="navbar navbar-expand-lg sticky-top">
-        <div class="container">
-            <div class="logo-midias">
-                <a class="navbar-brand">
-                    <img src="./src/imgs/logo_papo_3.png" alt="Logo Papo Paralello" width="80" height="70">
-                    PAPO PARALELLO
-                </a>
-                <ul>
-                    <li>
-                        <a target="_blank" href="https://www.instagram.com/papoparalello/"><i
-                                class="bi bi-instagram"></i></a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://www.youtube.com/c/PAPOPARALELLO"><i
-                                class="bi bi-youtube"></i></a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://open.spotify.com/show/5RuE3iEaAZ4b7dPhFyijY5"><i
-                                class="bi bi-spotify"></i></a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://www.tiktok.com/@papoparalello?_t=8zqdp9d526y&_r=1"><i
-                                class="bi bi-tiktok"></i></a>
-                    </li>
-                </ul>
-            </div>
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-navegacao">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <nav class="navbar-collapse collapse justify-content-end" id="menu-navegacao">
-                <ul class="nav nav-pills d-block d-md-flex ">
-                    <li class="nav-item fw-bold">
-                        <a class="nav-link" data-offset="500" href="#sobre">
-                            <i class="me-1 bi bi-file-person"></i>
-                            Sobre
-                        </a>
-                    </li>
-                    <li class="nav-item fw-bold">
-                        <a class="nav-link" data-offset="500" href="#podcast">
-                            <i class="me-1 bi bi-mic"></i>
-                            Podcast
-                        </a>
-                    </li>
-                    <li class="nav-item fw-bold">
-                        <a class="nav-link" data-offset="500" href="#programas">
-                            <i class="me-1 bi bi-tv"></i>
-                            Nosso Trabalho
-                        </a>
-                    </li>
-                    <li class="nav-item fw-bold">
-                        <a class="nav-link" data-offset="500" href="#apoio">
-                            <i class="me-1 bi bi-person-arms-up"></i>
-                            Apoio
-                        </a>
-                    </li>
-                    <li class="nav-item fw-bold">
-                        <a class="nav-link" data-offset="500" href="#contato">
-                            <i class="me-1 bi bi-envelope"></i>
-                            Contato
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-
-        </div>
-    </header>
-    <div class="corpo" data-bs-spy="scroll" data-bs-target="cabecalho">
-        <section id="inicio" class="d-flex">
-            <div id="inicioContainer" class="container d-flex justify-content-around">
-                <div class="texto col-md-8 col-sm-12">
-                    <h2 class="">Somos o Podcast do Mundo Psytrance</h2>
-                    <p>Vamos falar e mostrar de tudo da nossa cena.</p>
-                    <button id="botao-inicio">Saiba mais</button>
-                </div>
-                <img class="col-md-4 col-sm-12" src="./src/imgs/logo_papo_branco.png" alt="logo papo paralello">
-            </div>
-        </section>
-        <div class="carousel slide" data-bs-ride="carousel" id="carousel">
-            <div class="carousel-inner">
-                <div data-bs-interval="4000" class="carousel-item active">
-                    <img src="../src/imgs/carousel_0.jpg" class="img-fluid" alt="foto no podecast">
-                </div>
-                <div data-bs-interval="4000" class="carousel-item">
-                    <img src="../src/imgs/carousel_1.jpg" class="img-fluid" alt="foto no podecast">
-                </div>
-                <div data-bs-interval="4000" class="carousel-item">
-                    <img src="../src/imgs/carousel_3.jpg" class="img-fluid" alt="foto no podecast">
-                </div>
-                <div data-bs-interval="4000" class="carousel-item">
-                    <img src="../src/imgs/carousel_4.jpg" class="img-fluid" alt="foto no podecast">
-                </div>
-                <!-- <div data-bs-interval="3000" class="carousel-item">
+	<body class="position-relative">
+		<header id="cabecalho" class="navbar navbar-expand-lg sticky-top">
+			<div class="container">
+				<div class="logo-midias">
+					<a class="navbar-brand">
+						<img
+							src="./src/imgs/logo_papo_branco.png"
+							alt="Logo Papo Paralello"
+							width="70"
+							height="70"
+						/>
+						PAPO PARALELLO
+					</a>
+					<ul>
+						<li>
+							<a target="_blank" href="https://www.youtube.com/c/PAPOPARALELLO"
+								><i class="bi bi-youtube"></i
+							></a>
+						</li>
+						<li>
+							<a target="_blank" href="https://www.instagram.com/papoparalello/"
+								><i class="bi bi-instagram"></i
+							></a>
+						</li>
+						<li>
+							<a
+								target="_blank"
+								href="https://www.tiktok.com/@papoparalello?_t=8zqdp9d526y&_r=1"
+								><i class="bi bi-tiktok"></i
+							></a>
+						</li>
+						<li>
+							<a
+								target="_blank"
+								href="https://open.spotify.com/show/5RuE3iEaAZ4b7dPhFyijY5"
+								><i class="bi bi-spotify"></i
+							></a>
+						</li>
+					</ul>
+				</div>
+				<button
+					class="navbar-toggler"
+					data-bs-toggle="collapse"
+					data-bs-target="#menu-navegacao"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<nav
+					class="navbar-collapse collapse justify-content-end"
+					id="menu-navegacao"
+				>
+					<ul class="nav nav-pills d-block d-md-flex">
+						<li class="nav-item fw-bold">
+							<a class="nav-link" data-offset="500" href="#sobre">
+								<i class="me-1 bi bi-file-person"></i>
+								Sobre
+							</a>
+						</li>
+						<li class="nav-item fw-bold">
+							<a class="nav-link" data-offset="500" href="#podcast">
+								<i class="me-1 bi bi-mic"></i>
+								Podcast
+							</a>
+						</li>
+						<li class="nav-item fw-bold">
+							<a class="nav-link" data-offset="500" href="#programas">
+								<i class="me-1 bi bi-tv"></i>
+								Nosso Trabalho
+							</a>
+						</li>
+						<li class="nav-item fw-bold">
+							<a class="nav-link" data-offset="500" href="#apoio">
+								<i class="me-1 bi bi-person-arms-up"></i>
+								Apoio
+							</a>
+						</li>
+						<li class="nav-item fw-bold">
+							<a class="nav-link" data-offset="500" href="#contato">
+								<i class="me-1 bi bi-envelope"></i>
+								Contato
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<div class="corpo" data-bs-spy="scroll" data-bs-target="cabecalho">
+			<section id="inicio" class="d-flex">
+				<div id="inicioContainer" class="container d-flex justify-content-around">
+					<div class="texto col-md-8 col-sm-12">
+						<h2 class="">SOMOS O PODCAST DO MUNDO PSYTRANDE</h2>
+						<p>Vamos falar e mostrar de tudo da nossa cena.</p>
+						<button id="botao-inicio">Saiba mais</button>
+					</div>
+					<img
+						class="col-md-4 col-sm-12"
+						src="./src/imgs/logo_papo_branco.png"
+						alt="logo papo paralello"
+					/>
+				</div>
+			</section>
+			<div class="carousel slide" data-bs-ride="carousel" id="carousel">
+				<div class="carousel-inner">
+					<div data-bs-interval="4000" class="carousel-item active">
+						<img
+							src="../src/imgs/carousel_0.jpg"
+							class="img-fluid"
+							alt="foto no podecast"
+						/>
+					</div>
+					<div data-bs-interval="4000" class="carousel-item">
+						<img
+							src="../src/imgs/carousel_1.jpg"
+							class="img-fluid"
+							alt="foto no podecast"
+						/>
+					</div>
+					<div data-bs-interval="4000" class="carousel-item">
+						<img
+							src="../src/imgs/carousel_3.jpg"
+							class="img-fluid"
+							alt="foto no podecast"
+						/>
+					</div>
+					<div data-bs-interval="4000" class="carousel-item">
+						<img
+							src="../src/imgs/carousel_4.jpg"
+							class="img-fluid"
+							alt="foto no podecast"
+						/>
+					</div>
+					<!-- <div data-bs-interval="3000" class="carousel-item">
                     <img src="../src/imgs/carousel_2.jpg" class="img-fluid" alt="foto no podecast">
                 </div> -->
-                <div class="carousel-indicators">
-                    <button type="button" class="active" data-bs-target="#carousel" data-bs-slide-to="0"></button>
-                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
-                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
-                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="3"></button>
-                    <!-- <button type="button" data-bs-target="#carousel" data-bs-slide-to="4"></button> -->
-                </div>
-            </div>
-        </div>
-        <section id="sobre">
-            <div>
-                <div class="container">
-                    <h3 class="mt-sm-0">SOBRE O PAPO PARALELO</h3>
-                    <div class="row align-items-top">
-                        <div class="col-md-5 col-sm-12">
-                            <picture>
-                                <source srcset="./src/imgs/sobre_small.png" media="(max-width: 767px)" />
-                                <img class="d-block w-100" src="./src/imgs/sobre.png" alt="Foto de Vinicius e Pedro">
-                            </picture>
-                        </div>
-                        <div class="col-md-7 col-sm-12">
-                            <p>
-                                O projeto tem o intuito de trazer mais conteúdo sobre a cena do Psytrance que esta
-                                crescendo
-                                cada vez mais a cada ano, mas que ainda é algo desconhecido para muitos.
-                            </p>
-                            <p>
-                                Nosso podcast tem o propósito de trazer conversas leves e agrádaveis com pessoas ligadas
-                                com
-                                a cena do Psytrance de alguma forma. Iremos conversar com DJs, produtores,
-                                excursionistas,
-                                fotógrafos, criadores de conteúdo, professores, etc, a lista é enorme e estamos ansiosos
-                                para conversar com cada umas dessas pessoas, e mostrar o que a nossa cena tem de melhor
-                                a
-                                oferecer.
-                            </p>
-                            <p>
-                                Em essência, o Papo Paralello não é apenas um veículo de entretenimento, mas sim um
-                                elemento integrante e enriquecedor da cultura do psytrance, cescendo a comunidade e
-                                fortalecendo os laços dentro dela.
-                                Todos os episódios também estão disponíveis no Spotify, Amazon Podcasts, Deezer, Apple
-                                Podcasts e Google Podcasts.
-                            </p>
-                            <!-- <div class="col-md-9 col-sm-12 redes">
+					<div class="carousel-indicators">
+						<button
+							type="button"
+							class="active"
+							data-bs-target="#carousel"
+							data-bs-slide-to="0"
+						></button>
+						<button
+							type="button"
+							data-bs-target="#carousel"
+							data-bs-slide-to="1"
+						></button>
+						<button
+							type="button"
+							data-bs-target="#carousel"
+							data-bs-slide-to="2"
+						></button>
+						<button
+							type="button"
+							data-bs-target="#carousel"
+							data-bs-slide-to="3"
+						></button>
+						<!-- <button type="button" data-bs-target="#carousel" data-bs-slide-to="4"></button> -->
+					</div>
+				</div>
+			</div>
+			<section id="sobre">
+				<div>
+					<div class="container">
+						<h3 class="mt-sm-0">SOBRE O PAPO PARALELO</h3>
+						<div class="row align-items-top">
+							<div class="col-md-5 col-sm-12">
+								<picture>
+									<source
+										srcset="./src/imgs/sobre_small.png"
+										media="(max-width: 767px)"
+									/>
+									<img
+										class="d-block w-100"
+										src="./src/imgs/sobre.png"
+										alt="Foto de Vinicius e Pedro"
+									/>
+								</picture>
+							</div>
+							<div class="col-md-7 col-sm-12">
+								<p>
+									O projeto tem o intuito de trazer mais conteúdo sobre a cena do
+									Psytrance que esta crescendo cada vez mais a cada ano, mas que ainda é
+									algo desconhecido para muitos.
+								</p>
+								<p>
+									Nosso podcast tem o propósito de trazer conversas leves e agrádaveis
+									com pessoas ligadas com a cena do Psytrance de alguma forma. Iremos
+									conversar com DJs, produtores, excursionistas, fotógrafos, criadores de
+									conteúdo, professores, etc, a lista é enorme e estamos ansiosos para
+									conversar com cada umas dessas pessoas, e mostrar o que a nossa cena
+									tem de melhor a oferecer.
+								</p>
+								<p>
+									Em essência, o Papo Paralello não é apenas um veículo de
+									entretenimento, mas sim um elemento integrante e enriquecedor da
+									cultura do psytrance, cescendo a comunidade e fortalecendo os laços
+									dentro dela. Todos os episódios também estão disponíveis no Spotify,
+									Amazon Podcasts, Deezer, Apple Podcasts e Google Podcasts.
+								</p>
+								<!-- <div class="col-md-9 col-sm-12 redes">
                                 <span>Confira nossas redes: </span>
                                 <ul>
                                     <li>
@@ -184,351 +254,534 @@
                                     </li>
                                 </ul>
                             </div> -->
-                        </div>
-                    </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="podcast" class="pt-5 pb-5">
+				<div class="container">
+					<div class="row">
+						<h3 class="section-title">PODCAST</h3>
+					</div>
+					<div class="row justify-content-center gx-5 gy-5">
+						<div class="col-md-4">
+							<div class="card">
+								<img
+									src="./src/imgs/podcast_1.jpg"
+									class="card-img-top"
+									alt="DJ Astrix"
+								/>
+								<div class="card-body">
+									<p class="card-text">
+										Paulo Vilela, a mente por trás do projeto Vegas, começou a carreira
+										como DJ em meados de 2005 na cidade de Joinville, Santa Catarina.
+										Encantado com a repercussão e dedicando mais tempo ao trabalho, lançou
+										em 2009 seu primeiro álbum autoral. Um dos maiores representantes
+										nacionais na cena.
+									</p>
+									<a
+										target="_blank"
+										href="https://www.youtube.com/watch?v=BzlqYZyXWf8&ab_channel=PAPOPARALELLO"
+										class="btn btn-primary"
+										>Assistir <i class="bi bi-play-btn ms-1"></i
+									></a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="card">
+								<img
+									src="./src/imgs/podcast_2.jpg"
+									class="card-img-top"
+									alt="DJ Talamasca"
+								/>
+								<div class="card-body">
+									<p class="card-text">
+										Fábio Defourny Martins mais conhecido como Dêfo, trabalhou como
+										coordenador de recreação por 10 anos, com sua maior experiência em
+										eventos culturais, fundou sua primeira empresa eventos corporativos,
+										esportivos e musicais em 2002, de lá para cá trabalhou com grandes
+										empresas e realizou eventos de renome internacional.
+									</p>
+									<a
+										target="_blank"
+										href="https://www.youtube.com/watch?v=RSt3rP3_O60&t=11s&ab_channel=PAPOPARALELLO"
+										class="btn btn-primary"
+										>Assistir <i class="bi bi-play-btn ms-1"></i
+									></a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="card">
+								<img
+									src="./src/imgs/podcast_3.jpg"
+									class="card-img-top"
+									alt="DJ Astrix"
+								/>
+								<div class="card-body">
+									<p class="card-text">
+										Leandro Sousa a.k.a VJ Vacão, há 11 anos é reconhecido por trazer
+										psicodelia visual ás pistas de dança ao redor do mundo. Sua
+										especialidade em mapeamento de video, Lookdev, Motion 2D e 3D, fazem
+										dele um verdadeiro mestre na criação de projeções que contam histórias
+										e criam atmosferas psicodélicas e sombrias.
+									</p>
+									<a
+										target="_blank"
+										href="https://www.youtube.com/watch?v=CxRuwVT7ztE&t=16362s&ab_channel=PAPOPARALELLO"
+										class="btn btn-primary"
+										>Assistir <i class="bi bi-play-btn ms-1"></i
+									></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 d-flex justify-content-center">
+						<a
+							id="veja-mais"
+							target="_blank"
+							class="w-md-50"
+							href="https://www.youtube.com/@PAPOPARALELLO/featured"
+							>Ver Todos Episódios <i class="bi bi-collection-play ms-2"></i
+						></a>
+					</div>
+				</div>
+			</section>
+			<section id="programas" class="pt-5 pb-5">
+				<div class="container">
+					<div class="row">
+						<h3 class="section-title">NOSSO TRABALHO</h3>
+					</div>
+					<div class="row gx-5 gy-3">
+						<aside class="col-lg-3">
+							<nav class="nav nav-pills flex-column">
+								<button
+									type="button"
+									data-bs-toggle="tab"
+									data-bs-target="#papo-paralello"
+									class="fw-bold text-start nav-link active"
+								>
+									Podcast
+									<i class="bi bi-caret-right-fill"></i>
+								</button>
+								<button
+									type="button"
+									data-bs-toggle="tab"
+									data-bs-target="#coberturas"
+									class="fw-bold text-start nav-link"
+								>
+									Cobertura de eventos
+									<i class="bi bi-caret-right-fill"></i>
+								</button>
+								<button
+									type="button"
+									data-bs-toggle="tab"
+									data-bs-target="#foto"
+									class="fw-bold text-start nav-link"
+								>
+									Mídia e fotografia "Still"
+									<i class="bi bi-caret-right-fill"></i>
+								</button>
+								<button
+									type="button"
+									data-bs-toggle="tab"
+									data-bs-target="#insta"
+									class="fw-bold text-start nav-link"
+								>
+									Instagram
+									<i class="bi bi-caret-right-fill"></i>
+								</button>
+							</nav>
+						</aside>
+						<div class="col-lg-9">
+							<div class="tab-content">
+								<div class="tab-pane active" id="papo-paralello">
+									<p class="subprograma subprograma__first">
+										<strong>O PODCAST</strong>
+									</p>
+									<p>
+										É realizado semanalmente, geralmente toda segunda-feira às 20:00. São
+										conversas em que falamos de diversos temas relacionados ao projeto e
+										experiências do convidado.
+										<br />Sempre trazemos alguma dinâmica que vai trazer um lado mais
+										pessoal e talvez inédito sobre o convidado. Por fim, fazemos as
+										perguntas que o público envia no chat ou Instagram.
+									</p>
+									<p class="subprograma">
+										<strong>RESENHA PARALELLA</strong>
+									</p>
+									<p>
+										A ideia é parecida com o podcast usual, mas é realizado de maneira
+										menos formal e mais discontraída.
+										<br />Os temas nas conversas são diversos. Normalmente, é realizado
+										com mais de 2 convidados diferentes e com pensamentos diferentes.
+									</p>
+									<p class="subprograma">
+										<strong>PAPO RETO</strong>
+									</p>
+									<p>
+										Esse formato é mais direto e objetivo. Temos perguntas previamente
+										elaboras e definidas. Como o nome diz, "Papo Reto", acaba sendo um
+										programa mais curto e focado em assuntos específicos.
+									</p>
+								</div>
+								<div class="tab-pane" id="coberturas">
+									<p class="subprograma subprograma__first">
+										<strong>SOBRE A COBERTURA</strong>
+									</p>
+									<p>
+										Nosso objetivo é aproximar as pessoas das experiências vibrantes das
+										festas de Psytrance, criando uma conexão genuína com o universo das
+										raves. Queremos que todos compreendam plenamente o que podem esperar
+										ao participar dos festivais, despertando assim um desejo crescente de
+										explorar e vivenciar essa cultura única.<br /><br />A cobertura das
+										festas vem com esse intuito de mostrar cada centímetro, cada detalhe
+										que a festa está oferecendo para as pessoas desfrutarem por dois, três
+										ou até mais dias. Queremos despertar o desejo da pessoa de vir
+										conhecer aquela determinada festa, mesmo que ela nunca tenha
+										frequentado uma festa de Psytrance.
+									</p>
+									<p class="subprograma">
+										<strong>ARENA PARALELLA</strong>
+									</p>
+									<p>
+										A Arena Paralella é realizada diretamente do evento. No local
+										realizamos o podcast com os convidados que estão disponíves no local.
+										Além de conversas e muitas histórias boas, é possivel realizar a
+										transmissão dos sets que serão apresentados no evento.
+									</p>
+								</div>
+								<div class="tab-pane" id="foto">
+									<p>
+										Ao integrar estrategicamente as marcas aos nossos episódios, não
+										apenas oferecemos visibilidade para esses parceiros, mas também
+										enriquecemos a experiência do público, trazendo conteúdos que vão além
+										do áudio.<br /><br />
+										Assim como a importância da fotografia still na captura de momentos
+										que contam histórias, essas ativações de marcas proporcionam uma
+										dimensão visual ao nosso podcast. Ao incorporar fotos e vídeos das
+										marcas parceiras em nossos episódios, não apenas estamos fortalecendo
+										a conexão emocional com nossa audiência, mas também estamos oferecendo
+										um valor agregado aos nossos patrocinadores.<br /><br />
+										Essas imagens não apenas mostram a parceria, mas também reforçam a
+										identidade da marca e promovem uma associação positiva com nosso
+										conteúdo.
+									</p>
+									<div class="fotos-programas d-flex justify-content-around">
+										<img src="./src/imgs/still_2.jpg" alt="foto estilo still" />
+										<img src="./src/imgs/still_3.jpg" alt="foto estilo still" />
+										<img src="./src/imgs/still_4.jpg" alt="foto estilo still" />
+									</div>
+								</div>
+								<div class="tab-pane" id="insta">
+									<div class="d-flex gap-5" id="insta-conteudo">
+										<div class="col-lg-6" id="feedback">
+											<h4 class="h3 pb-3 text-center">Feedback</h4>
+											<p>
+												Nosso perfil no intagram movimenta quando publicamos conteúdos ,
+												tanto stories quanto reels crescem os números de visualizações
+												consideravelmente.<br /><br />
+												Principalemte nas coberturas, temos muitos pedidos por esse tipo de
+												conteúdo e também muitos elogios por parte do público. Buscamos
+												trazer uma visão do que é o nosso trabalho como queremos impactar na
+												cena do psytrance.
+											</p>
+											<div class="fotos-programas d-flex justify-content-around">
+												<img src="./src/imgs/insta_1.png" alt="comentarios instagram" />
+												<img src="./src/imgs/insta_2.png" alt="comentarios instagram" />
+											</div>
+										</div>
+										<div class="col-lg-5" id="nossos-numeros">
+											<h4 class="h3 pb-3 text-center">Nossos Números</h4>
+											<div class="d-flex flex-column gap-5 align-items-center">
+												<a
+													target="_blank"
+													href="https://www.instagram.com/reel/CsG15-7AFAO/"
+													><img
+														width="60%"
+														src="./src/imgs/numeros_1.png"
+														alt="numeros_visualizacoes"
+												/></a>
+												<a
+													target="_blank"
+													href="https://www.instagram.com/reel/CvFcr7ptC9t/"
+													><img
+														width="60%"
+														src="./src/imgs/numeros_2.png"
+														alt="numeros_visualizacoes"
+												/></a>
+												<a target="_blank" 
+                                                href="https://www.instagram.com/reel/C5_g1IkvDhE/"
+													><img
+														width="60%"
+														src="./src/imgs/numeros_3.png"
+														alt="numeros_visualizacoes"
+												/></a>
+												<a target="_blank" 
+                                                href="https://www.instagram.com/reel/C6l4-tnu9ys/"
+													><img
+														width="60%"
+														src="./src/imgs/numeros_4.png"
+														alt="numeros_visualizacoes"
+												/></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="apoio" class="pt-5 pb-5">
+				<div>
+					<div class="container">
+						<h3 class="mt-sm-0">APOIO</h3>
+						<!-- <h4 class="h5 pb-3">Nossos Parceiros:</h4> -->
+						<div
+							id="patrocinadores"
+							class="d-flex align-items-center justify-content-around pb-5"
+						>
+							<img
+								id="paletes"
+								src="./src/imgs/paletes-pinus_logo.png"
+								alt="logo paletes e pinus"
+							/>
+							<img src="./src/imgs/stone_ligth_logo.png" alt="logo stone ligth" />
+							<img src="./src/imgs/roletronic_logo.png" alt="logo roletronic" />
+						</div>
+						<!-- <h4 class="h5 pb-3">O Papo Paralello já fez parceria com:</h4> -->
+						<div class="marquee">
+							<ul class="marquee-content">
+								<li>
+									<span>Árvore da Vida </span>
+									<!-- <img src="https://www.placehold.co/100x50" alt=""> -->
+								</li>
+								<li>
+									<span>Flor da Vida </span>
+									<!-- <img src="https://www.placehold.co/100x50" alt=""> -->
+								</li>
+								<li>
+									<span>Xeque Mate </span>
+									<!-- <img src="https://www.placehold.co/100x50" alt=""> -->
+								</li>
+								<li>
+									<span>Baobá </span>
+									<!-- <img src="https://www.placehold.co/100x50" alt=""> -->
+								</li>
+								<li>
+									<span>Progressive </span>
+									<!-- <img src="https://www.placehold.co/100x50" alt=""> -->
+								</li>
+								<li>
+									<span>Mundo de Oz </span>
+									<!-- <img src="https://www.placehold.co/100x50" alt=""> -->
+								</li>
+								<li>
+									<span>Reveilloz </span>
+									<!-- <img src="https://www.placehold.co/100x50" alt=""> -->
+								</li>
+								<li>
+									<span>Ultra Brasil </span>
+									<!-- <img src="https://www.placehold.co/100x50" alt=""> -->
+								</li>
+								<li>
+									<span>Hitech Revolution </span>
+									<!-- <img src="https://www.placehold.co/100x50" alt=""> -->
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="contato" class="pt-5 pb-5">
+				<div class="container">
+					<div class="row">
+						<h3 class="section-title">CONTATO</h3>
+					</div>
+					<div class="row gx-5 gy-5">
+						<div class="col-md-7">
+							<form id="form-contato">
+								<div>
+									<label class="mb-2 mt-0" for="contact_name">Seu nome</label>
+									<input
+										required
+										type="text"
+										class="form-control"
+										name="contact_name"
+										id="nome"
+									/>
+								</div>
+								<div>
+									<label class="mb-2 mt-2" for="contact_email">Seu email</label>
+									<input
+										required
+										type="email"
+										class="form-control"
+										name="contact_email"
+										id="email"
+									/>
+								</div>
+								<div>
+									<label class="mb-2 mt-2" for="contact_number">Seu telefone</label>
+									<input
+										required
+										type="tel"
+										class="form-control"
+										name="contact_number"
+										id="tel"
+									/>
+								</div>
+								<div>
+									<label class="mb-2 mt-2" for="contact_message">Sua Mensagem</label>
+									<textarea
+										class="form-control"
+										name="contact_message"
+										id="msg"
+										cols="20"
+										rows="5"
+									></textarea>
+								</div>
+								<button type="submit" class="btn mt-3">Enviar</button>
+							</form>
+						</div>
+						<div class="col-md-5">
+							<h4 id="redes-sociais" class="section-title fs-4 fw-light mb-0">
+								Redes Sociais:
+							</h4>
+							<ul>
+								<li>
+									<a target="_blank" href="https://www.youtube.com/c/PAPOPARALELLO"
+										><i class="bi bi-youtube"></i
+									></a>
+								</li>
+								<li>
+									<a target="_blank" href="https://www.instagram.com/papoparalello/"
+										><i class="bi bi-instagram"></i
+									></a>
+								</li>
+								<li>
+									<a
+										target="_blank"
+										href="https://www.tiktok.com/@papoparalello?_t=8zqdp9d526y&_r=1"
+										><i class="bi bi-tiktok"></i
+									></a>
+								</li>
+								<li>
+									<a
+										target="_blank"
+										href="https://open.spotify.com/show/5RuE3iEaAZ4b7dPhFyijY5"
+										><i class="bi bi-spotify"></i
+									></a>
+								</li>
+							</ul>
+							<span class="fs-5"
+								>Siga a gente lá!<i class="bi bi-hand-thumbs-up-fill ms-2"></i
+							></span>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<footer>
+			<div class="container text-center pt-3 pb-3">
+				<span
+					>&copy Todos Direitos Reservados | Site elaborado por
+					<a target="_blank" href="https://github.com/bruno-corso">BTC</a>
+					| 2024</span
+				>
+			</div>
+		</footer>
+		<!-- <div aria-live="polite" aria-atomic="true" class="position-relative"> -->
+		<div class="toast-container top-0 end-0">
+			<div
+				id="toastSuccess"
+				class="toast"
+				role="alert"
+				aria-live="assertive"
+				aria-atomic="true"
+			>
+				<!-- Javascript code... -->
+			</div>
+			<!-- <div id="toastFail" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <img src="..." class="rounded me-2" alt="...">
+                    <strong class="me-auto">Bootstrap</strong>
+                    <small>11 mins ago</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
                 </div>
-            </div>
-        </section>
-        <section id="podcast" class="pt-5 pb-5">
-            <div class="container">
-                <div class="row">
-                    <h3 class="section-title">PODCAST</h3>
+                <div class="toast-body">
+                    Hello, world! This is a toast message.
                 </div>
-                <div class="row justify-content-center gx-5 gy-5">
-                    <div class="col-md-4 ">
-                        <div class="card">
-                            <img src="./src/imgs/podcast_1.jpg" class="card-img-top" alt="DJ Astrix">
-                            <div class="card-body">
-                                <p class="card-text">Paulo Vilela, a mente por trás do projeto Vegas, começou a carreira
-                                    como DJ em meados de 2005 na cidade de Joinville, Santa Catarina. Encantado com a
-                                    repercussão e dedicando mais tempo ao trabalho, lançou em 2009 seu primeiro álbum
-                                    autoral. Um dos maiores representantes nacionais na cena.</p>
-                                <a target="_blank"
-                                    href="https://www.youtube.com/watch?v=BzlqYZyXWf8&ab_channel=PAPOPARALELLO"
-                                    class="btn btn-primary">Assistir <i class="bi bi-play-btn ms-1"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 ">
-                        <div class="card">
-                            <img src="./src/imgs/podcast_2.jpg" class="card-img-top" alt="DJ Talamasca">
-                            <div class="card-body">
-                                <p class="card-text">Fábio Defourny Martins mais conhecido como Dêfo, trabalhou como
-                                    coordenador de recreação por 10 anos, com sua maior experiência em eventos
-                                    culturais, fundou sua primeira empresa eventos corporativos, esportivos e musicais
-                                    em 2002, de lá para cá trabalhou com grandes empresas e realizou eventos de renome
-                                    internacional.</p>
-                                <a target="_blank"
-                                    href="https://www.youtube.com/watch?v=RSt3rP3_O60&t=11s&ab_channel=PAPOPARALELLO"
-                                    class="btn btn-primary">Assistir <i class="bi bi-play-btn ms-1"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 ">
-                        <div class="card">
-                            <img src="./src/imgs/podcast_3.jpg" class="card-img-top" alt="DJ Astrix">
-                            <div class="card-body">
-                                <p class="card-text">Leandro Sousa a.k.a VJ Vacão, há 11 anos é reconhecido por trazer
-                                    psicodelia visual ás pistas de dança ao redor do mundo. Sua especialidade em
-                                    mapeamento de video, Lookdev, Motion 2D e 3D, fazem dele um verdadeiro mestre na
-                                    criação de projeções que contam histórias e criam atmosferas psicodélicas e
-                                    sombrias.
-                                </p>
-                                <a target="_blank"
-                                    href="https://www.youtube.com/watch?v=CxRuwVT7ztE&t=16362s&ab_channel=PAPOPARALELLO"
-                                    class="btn btn-primary">Assistir <i class="bi bi-play-btn ms-1"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 d-flex justify-content-center">
-                    <a id="veja-mais" target="_blank" class="w-md-50"
-                        href="https://www.youtube.com/@PAPOPARALELLO/featured">Ver Todos
-                        Episódios <i class="bi bi-collection-play ms-2"></i></a>
-                </div>
-            </div>
-        </section>
-        <section id="programas" class="pt-5 pb-5">
-            <div class="container">
-                <div class="row">
-                    <h3 class="section-title">NOSSO TRABALHO</h3>
-                </div>
-                <div class="row gx-5 gy-3">
-                    <aside class="col-lg-3">
-                        <nav class="nav nav-pills flex-column">
-                            <button type="button" data-bs-toggle="tab" data-bs-target="#papo-paralello"
-                                class="fw-bold text-start nav-link active">Podcast <i
-                                    class="bi bi-caret-right-fill"></i></i>
-                            </button>
-                            <button type="button" data-bs-toggle="tab" data-bs-target="#coberturas"
-                                class="fw-bold text-start nav-link">Cobertura de eventos <i
-                                    class="bi bi-caret-right-fill"></i></i> </button>
-                            <button type="button" data-bs-toggle="tab" data-bs-target="#foto"
-                                class="fw-bold text-start nav-link">Mídia e fotografia "Still" <i
-                                    class="bi bi-caret-right-fill"></i></i> </button>
-                            <button type="button" data-bs-toggle="tab" data-bs-target="#insta"
-                                class="fw-bold text-start nav-link">Instagram <i class="bi bi-caret-right-fill"></i></i>
-                            </button>
-                        </nav>
-                    </aside>
-                    <div class="col-lg-9">
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="papo-paralello">
-                                <p class="subprograma subprograma__first"><strong>O PODCAST</strong></p>
-                                <p>
-                                    É realizado semanalmente, geralmente toda segunda-feira às
-                                    20:00.
-                                    São conversas em que falamos de diversos temas relacionados ao projeto e
-                                    experiências do convidado. <br>Sempre trazemos alguma dinâmica que vai trazer um
-                                    lado mais pessoal e talvez inédito sobre o convidado. Por
-                                    fim, fazemos as perguntas que o público envia no chat ou Instagram.
-                                </p>
-                                <p class="subprograma"><strong>RESENHA PARALELLA</strong></p>
-                                <p>
-                                    A ideia é parecida com o podcast usual, mas é realizado de maneira menos
-                                    formal e mais discontraída. <br>Os temas nas conversas são diversos.
-                                    Normalmente, é realizado com mais de 2 convidados diferentes e com pensamentos
-                                    diferentes.
-                                </p>
-                                <p class="subprograma"><strong>PAPO RETO</strong></p>
-                                <p>
-                                    Esse formato é mais direto e objetivo. Temos perguntas previamente elaboras e
-                                    definidas. Como o nome diz, "Papo Reto", acaba sendo um programa mais curto e focado
-                                    em assuntos específicos.
-                                </p>
-                            </div>
-                            <div class="tab-pane" id="coberturas">
-                                <p class="subprograma subprograma__first"><strong>SOBRE A COBERTURA</strong></p>
-                                <p>
-                                    Nosso objetivo é aproximar as pessoas das experiências vibrantes das festas de
-                                    Psytrance, criando uma conexão genuína com o universo das raves. Queremos que todos
-                                    compreendam plenamente o que podem esperar ao participar dos festivais, despertando
-                                    assim um desejo crescente de explorar e vivenciar essa cultura única.<br><br>A
-                                    cobertura das festas vem com esse intuito de mostrar cada centímetro, cada detalhe
-                                    que a festa está oferecendo para as pessoas desfrutarem por dois, três ou até mais
-                                    dias. Queremos despertar o desejo da pessoa de vir conhecer aquela determinada
-                                    festa, mesmo que ela nunca tenha frequentado uma festa de Psytrance.
-                                </p>
-                                <p class="subprograma"><strong>ARENA PARALELLA</strong></p>
-                                <p>
-                                    A Arena Paralella é realizada diretamente do evento. No local realizamos o podcast
-                                    com os convidados que estão disponíves no local. Além de conversas e muitas
-                                    histórias boas, é possivel realizar a transmissão
-                                    dos sets que serão apresentados no evento.
-                                </p>
-                            </div>
-                            <div class="tab-pane" id="foto">
-                                <p>
-                                    Ao integrar estrategicamente as marcas aos nossos episódios, não apenas oferecemos
-                                    visibilidade para esses parceiros, mas também enriquecemos a experiência do público,
-                                    trazendo conteúdos que vão além do áudio.<br><br> Assim como a importância da
-                                    fotografia
-                                    still na captura de momentos que contam histórias, essas ativações de marcas
-                                    proporcionam uma dimensão visual ao nosso podcast. Ao incorporar fotos e vídeos das
-                                    marcas parceiras em nossos episódios, não apenas estamos fortalecendo a conexão
-                                    emocional com nossa audiência, mas também estamos oferecendo um valor agregado aos
-                                    nossos patrocinadores.<br><br> Essas imagens não apenas mostram a parceria, mas
-                                    também
-                                    reforçam a identidade da marca e promovem uma associação positiva com nosso
-                                    conteúdo.
-                                </p>
-                                <div class="fotos-programas d-flex justify-content-around">
-                                    <img src="./src/imgs/still_2.jpg" alt="foto estilo still">
-                                    <img src="./src/imgs/still_3.jpg" alt="foto estilo still">
-                                    <img src="./src/imgs/still_4.jpg" alt="foto estilo still">
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="insta">
-                                <p>
-                                    Nosso perfil no intagram movimenta quando publicamos conteúdos , tanto stories
-                                    quanto reels crescem os números de visualizações
-                                    consideravelmente.<br><br> Principalemte nas coberturas, temos muitos pedidos por
-                                    esse tipo de conteúdo e também
-                                    muitos elogios por parte do público. Buscamos trazer uma visão do que é o
-                                    nosso trabalho como queremos impactar na cena do psytrance.
-                                </p>
-                                <div class="fotos-programas d-flex justify-content-around">
-                                    <img src="./src/imgs/insta_1.png" alt="comentarios instagram">
-                                    <img src="./src/imgs/insta_2.png" alt="comentarios instagram">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="apoio" class="pt-5 pb-5">
-            <div>
-                <div class="container">
-                    <h3 class="mt-sm-0">APOIO</h3>
-                    <!-- <h4 class="h5 pb-3">Nossos Parceiros:</h4> -->
-                    <div id="patrocinadores" class="d-flex align-items-center justify-content-around pb-5">
-                        <img src="./src/imgs/paletes-pinus_logo.png" alt="logo paletes e pinus">
-                        <img src="./src/imgs/stone_ligth_logo.png" alt="logo stone ligth">
-                        <img src="./src/imgs/roletronic_logo.png" alt="logo roletronic">
-                    </div>
-                    <!-- <h4 class="h5 pb-3">O Papo Paralello já fez parceria com:</h4> -->
-                    <div class="marquee">
-                        <ul class="marquee-content">
-                            <li>
-                                <span>Árvore da Vida </span>
-                                <!-- <img src="https://www.placehold.co/100x50" alt=""> -->
-                            </li>
-                            <li>
-                                <span>Flor da Vida </span>
-                                <!-- <img src="https://www.placehold.co/100x50" alt=""> -->
-                            </li>
-                            <li>
-                                <span>Xeque Mate </span>
-                                <!-- <img src="https://www.placehold.co/100x50" alt=""> -->
-                            </li>
-                            <li>
-                                <span>Baobá </span>
-                                <!-- <img src="https://www.placehold.co/100x50" alt=""> -->
-                            </li>
-                            <li>
-                                <span>Progressive </span>
-                                <!-- <img src="https://www.placehold.co/100x50" alt=""> -->
-                            </li>
-                            <li>
-                                <span>Mundo de Oz </span>
-                                <!-- <img src="https://www.placehold.co/100x50" alt=""> -->
-                            </li>
-                            <li>
-                                <span>Reveilloz </span>
-                                <!-- <img src="https://www.placehold.co/100x50" alt=""> -->
-                            </li>
-                            <li>
-                                <span>Ultra Brasil </span>
-                                <!-- <img src="https://www.placehold.co/100x50" alt=""> -->
-                            </li>
-                            <li>
-                                <span>Hitech Revolution </span>
-                                <!-- <img src="https://www.placehold.co/100x50" alt=""> -->
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="contato" class="pt-5 pb-5">
-            <div class="container">
-                <div class="row">
-                    <h3 class="section-title">CONTATO</h3>
-                </div>
-                <div class="row gx-5 gy-5">
-                    <div class="col-md-7">
-                        <form id="form-contato">
-                            <div>
-                                <label class="mb-2 mt-0" for="contact_name">Seu nome</label>
-                                <input required type="text" class="form-control" name="contact_name" id="nome">
-                            </div>
-                            <div>
-                                <label class="mb-2 mt-2" for="contact_email">Seu email</label>
-                                <input required type="email" class="form-control" name="contact_email" id="email">
-                            </div>
-                            <div>
-                                <label class="mb-2 mt-2" for="contact_number">Seu telefone</label>
-                                <input required type="tel" class="form-control" name="contact_number" id="tel">
-                            </div>
-                            <div>
-                                <label class="mb-2 mt-2" for="contact_message">Sua Mensagem</label>
-                                <textarea class="form-control" name="contact_message" id="msg" cols="20" rows="5"></textarea>
-                            </div>
-                            <button type="submit" class="btn mt-3">Enviar</button>
-                        </form>
-                    </div>
-                    <div class="col-md-5">
-                        <h4 id="redes-sociais" class="section-title fs-4 fw-light mb-0"></i>Redes Sociais:</h4>
-                        <ul>
-                            <li>
-                                <a target="_blank" href="https://www.instagram.com/papoparalello/"><i
-                                        class="bi bi-instagram"></i></a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://www.youtube.com/c/PAPOPARALELLO"><i
-                                        class="bi bi-youtube"></i></a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://open.spotify.com/show/5RuE3iEaAZ4b7dPhFyijY5"><i
-                                        class="bi bi-spotify"></i></a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://www.tiktok.com/@papoparalello?_t=8zqdp9d526y&_r=1"><i
-                                        class="bi bi-tiktok"></i></a>
-                            </li>
-                        </ul>
-                        <span class="fs-5">Siga a gente lá!<i class="bi bi-hand-thumbs-up-fill ms-2"></i></span>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-    <footer>
-        <div class="container text-center pt-3 pb-3">
-            <span>&copy Todos Direitos Reservados | Site elaborado por <a target="_blank"
-                    href="https://github.com/bruno-corso">BTC</a> | 2024</span>
-        </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        const inicio = document.getElementById('inicioContainer');
+            </div> -->
+		</div>
+		<!-- </div> -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+		<script>
+			const inicio = document.getElementById('inicioContainer')
 
-        window.addEventListener('load', function () {
-            inicio.classList.add('aparecer');
-        });
+			window.addEventListener('load', function () {
+				inicio.classList.add('aparecer')
+			})
 
-        const linksAnchor = document.querySelectorAll('a[href^="#"]');
-        for (const link of linksAnchor) {
-            link.addEventListener('click', (event) => {
-                event.preventDefault();
+			const linksAnchor = document.querySelectorAll('a[href^="#"]')
+			for (const link of linksAnchor) {
+				link.addEventListener('click', (event) => {
+					event.preventDefault()
 
-                const targetSection = document.querySelector(link.getAttribute('href'));
-                const offset = targetSection.offsetTop - document.querySelector('.navbar').offsetHeight;
+					const targetSection = document.querySelector(link.getAttribute('href'))
+					const offset =
+						targetSection.offsetTop - document.querySelector('.navbar').offsetHeight
 
-                window.scrollTo({
-                    top: offset,
-                    behavior: 'smooth',
-                });
-            });
-        }
+					window.scrollTo({
+						top: offset,
+						behavior: 'smooth',
+					})
+				})
+			}
 
-        const botaoSaibaMais = document.getElementById('botao-inicio')
-        const alturaSobre = (document.getElementById('sobre').offsetHeight);
-        botaoSaibaMais.addEventListener('click', (e) => {
-            e.preventDefault();
-            console.log(botaoSaibaMais.offsetHeight);
-            window.scrollTo({
-                top: document.getElementById('sobre').offsetTop - document.querySelector('.navbar').offsetHeight,
-                behavior: "smooth",
-            });
-        })
+			const botaoSaibaMais = document.getElementById('botao-inicio')
+			const alturaSobre = document.getElementById('sobre').offsetHeight
+			botaoSaibaMais.addEventListener('click', (e) => {
+				e.preventDefault()
+				console.log(botaoSaibaMais.offsetHeight)
+				window.scrollTo({
+					top:
+						document.getElementById('sobre').offsetTop -
+						document.querySelector('.navbar').offsetHeight,
+					behavior: 'smooth',
+				})
+			})
 
-        const logoBrand = document.querySelector('.navbar-brand')
-        logoBrand.addEventListener('click', (e) => {
-            e.preventDefault();
-            console.log(botaoSaibaMais.offsetHeight);
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth",
-            });
-        })
+			const logoBrand = document.querySelector('.navbar-brand')
+			logoBrand.addEventListener('click', (e) => {
+				e.preventDefault()
+				console.log(botaoSaibaMais.offsetHeight)
+				window.scrollTo({
+					top: 0,
+					behavior: 'smooth',
+				})
+			})
+		</script>
+		<script>
+			const root = document.documentElement
+			const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue(
+				'--marquee-elements-displayed'
+			)
+			const marqueeContent = document.querySelector('ul.marquee-content')
 
-    </script>
-    <script>
-        const root = document.documentElement;
-        const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
-        const marqueeContent = document.querySelector("ul.marquee-content");
+			root.style.setProperty('--marquee-elements', marqueeContent.children.length)
 
-        root.style.setProperty("--marquee-elements", marqueeContent.children.length);
-
-        for (let i = 0; i < marqueeElementsDisplayed; i++) {
-            marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
-        }
-    </script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-    <script src="./src/main.js"></script>
-</body>
-
+			for (let i = 0; i < marqueeElementsDisplayed; i++) {
+				marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true))
+			}
+		</script>
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+		></script>
+		<script src="./src/main.js"></script>
+	</body>
 </html>

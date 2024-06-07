@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     vForm.addEventListener('submit', function (e) {
         e.preventDefault()
+        toastSuccess();
 
         const vNome = document.getElementById('nome').value;
         const vEmail = document.getElementById('email').value;
@@ -22,12 +23,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
         console.log(arrayVariable);
 
-        emailjs.send('service_tmd1fml', 'contact_email', arrayVariable)
-            .then(() => {
-                console.log('SUCCESS!');
-            }, (error) => {
-                console.log('FAILED...', error);
-            });
-    })
-
 })
+
+function toastSuccess() {
+    const toast = document.getElementById('toastSuccess')
+    toast.innerHTML = 
+    `
+        <div class="toast-header">
+            <strong class="me-auto">Mensagem</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            Sua mensagem foi enviada com sucessso!
+        </div>
+    `;
+
+    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toast)
+    toastBootstrap.show()
+}
+
+function toastFail() {
+    
+}

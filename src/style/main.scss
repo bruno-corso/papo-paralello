@@ -34,6 +34,7 @@ body {
 
     img {
         margin-right: 1rem;
+        margin-bottom: 10px;
     }
 }
 
@@ -48,7 +49,7 @@ body {
     ul {
         list-style: none;
         padding-left: 2rem;
-        margin-bottom: 0;
+        margin-bottom: 5px;
 
         li {
             display: inline;
@@ -285,6 +286,14 @@ a#veja-mais {
         opacity: 0.8;
     }
 
+    a {
+        width: 100%;
+        text-align: center;
+        :hover{
+            scale: 1.05;
+        }
+    }
+
     .nav {
         &-link.active {
             background-color: variaveis.$corDestaque;
@@ -296,14 +305,26 @@ a#veja-mais {
         border-right: 1px solid variaveis.$corBgNavBar;
     }
 
+    .fotos-programas {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
 
     .fotos-programas>img {
-        width: 30%;
+        display: block;
+        width: 100%;
         border: 1px solid transparent;
         /* Define a largura da borda e a torna transparente */
         border-radius: 10px;
         /* Adiciona cantos arredondados à borda */
+        box-shadow: 2px 2px 4px #222;
         // filter: blur(10px);
+    }
+
+    #nossos-numeros img {
+        border-radius: 10px;
+        box-shadow: 2px 2px 4px #222;
     }
 }
 
@@ -319,6 +340,14 @@ a#veja-mais {
 
 #patrocinadores img {
     width: 20%;
+
+    &#paletes {
+        width: 15%;
+    }
+}
+
+#paletes {
+    width: 10px;
 }
 
 section#contato {
@@ -379,6 +408,7 @@ footer {
 
         img {
             margin-right: 0.3rem;
+            margin-bottom: 8px;
             width: 50px;
             height: 45px;
         }
@@ -452,10 +482,7 @@ footer {
     .fotos-programas {
         flex-direction: column;
         gap: 20px;
-    }
-
-    #patrocinadores img {
-        width: 50%;
+        align-items: center;
     }
 
     #programas .fotos-programas>img {
@@ -494,28 +521,32 @@ footer {
         }
     }
 
+    #patrocinadores img, #patrocinadores img#paletes {
+        width: 50%;
+    }
+
 
 }
 
 @media screen and (min-width: 990px) and (max-width: 1400px) {
 
-    a.nav-link{
+    a.nav-link {
         padding: 0.5rem;
     }
 
     .logo-midias {
         display: flex;
         align-items: center;
-    
+
         ul {
             list-style: none;
             padding-left: 1.5rem;
-            margin-bottom: 0;
-    
+            margin-bottom: 5px;
+
             li {
                 display: inline;
                 margin-right: 0.75rem;
-    
+
                 a {
                     font-size: 1rem;
                     color: variaveis.$corDestaque;
@@ -523,4 +554,28 @@ footer {
             }
         }
     }
+
+}
+
+@media screen and (max-width: 989px) {
+
+    #programas {
+        .fotos-programas>img {
+            width: 50%;
+        }
+
+        #insta-conteudo{
+            flex-direction: column;
+            align-items: center;
+
+            #nossos-numeros{
+                width: 100%;
+                img{
+                    width: 50%;
+                }
+            }
+        }
+
+    }
+
 }

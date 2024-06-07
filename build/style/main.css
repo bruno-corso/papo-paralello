@@ -8,10 +8,10 @@
 :root {
   --marquee-width: 100%;
   --marquee-height: 60px;
-  /* --marquee-elements: 12; */
+  --marquee-elements: 12;
   /* defined with JavaScript */
   --marquee-elements-displayed: 4;
-  --marquee-element-width: 200px;
+  --marquee-element-width: auto;
   --marquee-animation-duration: calc(var(--marquee-elements) * 5s);
 }
 
@@ -63,6 +63,7 @@
   white-space: nowrap;
   font-size: 1.25rem;
   text-transform: uppercase;
+  margin-right: 80px;
 }
 .marquee-content li img {
   /* height: 100%; */
@@ -77,7 +78,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements)));
+    transform: translateX(calc(-200px * var(--marquee-elements)));
   }
 }
 @media (max-width: 1023px) {
@@ -136,6 +137,7 @@ body {
 }
 .navbar-brand img {
   margin-right: 1rem;
+  margin-bottom: 10px;
 }
 
 .navbar-toggler {
@@ -149,7 +151,7 @@ body {
 .logo-midias ul {
   list-style: none;
   padding-left: 2rem;
-  margin-bottom: 0;
+  margin-bottom: 5px;
 }
 .logo-midias ul li {
   display: inline;
@@ -339,6 +341,13 @@ a#veja-mais:hover {
   text-align: justify;
   opacity: 0.8;
 }
+#programas a {
+  width: 100%;
+  text-align: center;
+}
+#programas a :hover {
+  scale: 1.05;
+}
 #programas .nav-link.active {
   background-color: #b88608;
   color: #D3D3D3;
@@ -346,12 +355,23 @@ a#veja-mais:hover {
 #programas aside {
   border-right: 1px solid #2e4239;
 }
+#programas .fotos-programas {
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
 #programas .fotos-programas > img {
-  width: 30%;
+  display: block;
+  width: 100%;
   border: 1px solid transparent;
   /* Define a largura da borda e a torna transparente */
   border-radius: 10px;
   /* Adiciona cantos arredondados à borda */
+  box-shadow: 2px 2px 4px #222;
+}
+#programas #nossos-numeros img {
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px #222;
 }
 
 #redes-sociais {
@@ -365,6 +385,13 @@ a#veja-mais:hover {
 
 #patrocinadores img {
   width: 20%;
+}
+#patrocinadores img#paletes {
+  width: 15%;
+}
+
+#paletes {
+  width: 10px;
 }
 
 section#contato ul {
@@ -415,6 +442,7 @@ footer a {
   }
   .navbar-brand img {
     margin-right: 0.3rem;
+    margin-bottom: 8px;
     width: 50px;
     height: 45px;
   }
@@ -472,9 +500,7 @@ footer a {
   .fotos-programas {
     flex-direction: column;
     gap: 20px;
-  }
-  #patrocinadores img {
-    width: 50%;
+    align-items: center;
   }
   #programas .fotos-programas > img {
     width: 75%;
@@ -502,6 +528,9 @@ footer a {
   section#inicio img {
     width: 300px;
   }
+  #patrocinadores img, #patrocinadores img#paletes {
+    width: 50%;
+  }
 }
 @media screen and (min-width: 990px) and (max-width: 1400px) {
   a.nav-link {
@@ -514,7 +543,7 @@ footer a {
   .logo-midias ul {
     list-style: none;
     padding-left: 1.5rem;
-    margin-bottom: 0;
+    margin-bottom: 5px;
   }
   .logo-midias ul li {
     display: inline;
@@ -523,6 +552,21 @@ footer a {
   .logo-midias ul li a {
     font-size: 1rem;
     color: #b88608;
+  }
+}
+@media screen and (max-width: 989px) {
+  #programas .fotos-programas > img {
+    width: 50%;
+  }
+  #programas #insta-conteudo {
+    flex-direction: column;
+    align-items: center;
+  }
+  #programas #insta-conteudo #nossos-numeros {
+    width: 100%;
+  }
+  #programas #insta-conteudo #nossos-numeros img {
+    width: 50%;
   }
 }
 
