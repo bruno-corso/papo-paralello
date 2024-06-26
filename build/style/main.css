@@ -360,6 +360,9 @@ a#veja-mais:hover {
   gap: 20px;
   align-items: center;
 }
+#programas #foto .fotos-programas > img {
+  width: 40%;
+}
 #programas .fotos-programas > img {
   display: block;
   width: 100%;
@@ -502,6 +505,9 @@ footer a {
     gap: 20px;
     align-items: center;
   }
+  #programas #foto .fotos-programas > img {
+    width: 80%;
+  }
   #programas .fotos-programas > img {
     width: 75%;
   }
@@ -528,7 +534,8 @@ footer a {
   section#inicio img {
     width: 300px;
   }
-  #patrocinadores img, #patrocinadores img#paletes {
+  #patrocinadores img,
+  #patrocinadores img#paletes {
     width: 50%;
   }
 }
