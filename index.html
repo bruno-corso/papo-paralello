@@ -132,15 +132,15 @@
 								class="fs-3 text-decoration-none text-white d-flex align-items-center"
 								target="_blank"
 								href="https://www.instagram.com/papoparalello/"
-								><i class="bi bi-instagram fs-1 text-white me-2"></i></a
-							>
+								><i class="bi bi-instagram fs-1 text-white me-2"></i
+							></a>
 							<a
 								id="seguidores-youtube"
 								class="fs-3 text-decoration-none text-white d-flex align-items-center"
 								target="_blank"
 								href="https://www.youtube.com/c/PAPOPARALELLO"
-								><i class="bi bi-youtube fs-1 text-white me-2"></i></a
-							>
+								><i class="bi bi-youtube fs-1 text-white me-2"></i
+							></a>
 						</div>
 						<button id="botao-inicio">Saiba mais</button>
 					</div>
@@ -625,44 +625,47 @@
 						<div class="col-md-7">
 							<form id="form-contato">
 								<div>
-									<label class="mb-2 mt-0" for="contact_name">Seu nome</label>
+									<label class="mb-2 mt-0" for="client_name">Seu nome</label>
 									<input
 										required
 										type="text"
 										class="form-control"
-										name="contact_name"
+										name="client_name"
 										id="nome"
 									/>
 								</div>
 								<div>
-									<label class="mb-2 mt-2" for="contact_email">Seu email</label>
+									<label class="mb-2 mt-2" for="client_email">Seu email</label>
 									<input
 										required
 										type="email"
 										class="form-control"
-										name="contact_email"
+										name="client_email"
 										id="email"
 									/>
 								</div>
 								<div>
-									<label class="mb-2 mt-2" for="contact_number">Seu telefone</label>
+									<label class="mb-2 mt-2" for="client_number">Seu telefone</label>
 									<input
 										required
 										type="tel"
 										class="form-control"
-										name="contact_number"
+										name="client_number"
 										id="tel"
 									/>
 								</div>
 								<div>
-									<label class="mb-2 mt-2" for="contact_message">Sua Mensagem</label>
+									<label class="mb-2 mt-2" for="client_message">Sua Mensagem</label>
 									<textarea
 										class="form-control"
-										name="contact_message"
+										name="client_message"
 										id="msg"
 										cols="20"
 										rows="5"
 									></textarea>
+								</div>
+								<div class="d-none" for="client_ticket">
+									<input type="text" id="client_tkt" name="client_ticket" />
 								</div>
 								<button type="submit" class="btn mt-3">Enviar</button>
 							</form>
