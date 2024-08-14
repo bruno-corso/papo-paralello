@@ -115,17 +115,17 @@ body {
 }
 
 .nav .nav-link,
-.navbar-brand,
-.navbar-brand:hover {
-  color: #D3D3D3;
+.navbar-brand {
+  color: #000;
+  font-size: 14px;
 }
 
 .navbar {
-  background-color: #2e4239;
+  background-color: #FFF;
   border-bottom: 0.5px solid #D3D3D3;
 }
 .navbar .nav .nav-link.active {
-  background-color: #b88608;
+  background-color: #000;
   color: #D3D3D3;
 }
 
@@ -141,7 +141,7 @@ body {
 }
 
 .navbar-toggler {
-  background-color: #b88608;
+  background-color: #FFF;
 }
 
 .logo-midias {
@@ -159,14 +159,16 @@ body {
 }
 .logo-midias ul li a {
   font-size: 1.5rem;
-  color: #b88608;
+  color: #000;
 }
 
 section#inicio {
   margin: 0;
-  height: calc(100vh - 100px);
   background-color: #2e4239;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%239C92AC' fill-opacity='0.05' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+section#inicio #inicioContainer {
+  margin-top: 2rem;
 }
 section#inicio .container {
   align-items: center;
@@ -179,8 +181,10 @@ section#inicio .container.aparecer {
   opacity: 1;
 }
 section#inicio h2 {
-  font-size: 64px;
+  font-size: 48px;
   font-weight: 700;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 section#inicio p {
   margin-top: 2rem;
@@ -201,12 +205,26 @@ section#inicio button:hover {
   cursor: pointer;
   transition: 0.3s;
 }
+section#inicio img {
+  padding-top: 2rem;
+}
 
 section#sobre,
 section#programas,
-section#contato {
+section#feedback {
   background-color: #3c594c;
   padding-top: 2rem;
+}
+section#sobre .nav .nav-link,
+section#sobre .navbar-brand,
+section#sobre .navbar-brand:hover,
+section#programas .nav .nav-link,
+section#programas .navbar-brand,
+section#programas .navbar-brand:hover,
+section#feedback .nav .nav-link,
+section#feedback .navbar-brand,
+section#feedback .navbar-brand:hover {
+  color: #D3D3D3;
 }
 
 .carousel {
@@ -227,7 +245,8 @@ section#contato {
 #podcast .container h3,
 #programas .container h3,
 #contato .container h3,
-#apoio .container h3 {
+#apoio .container h3,
+#feedback .container h3 {
   font-weight: 700;
   font-size: 2rem;
   font-family: "League Spartan", sans-serif;
@@ -238,38 +257,66 @@ section#contato {
 }
 
 #sobre p,
-#sobre span {
+#sobre span,
+#feedback p,
+#feedback span {
   text-align: justify;
   font-size: 1.3rem;
   padding: 0 1rem;
   color: #D3D3D3;
 }
-#sobre span {
+#sobre span,
+#feedback span {
   text-decoration: underline;
 }
-#sobre .container {
+#sobre .container,
+#feedback .container {
   margin-top: 2rem;
 }
-#sobre .container img {
+#sobre .container img,
+#feedback .container img {
   margin-bottom: 2rem;
 }
-#sobre ul {
+#sobre ul,
+#feedback ul {
   list-style: none;
   margin-left: 0;
   padding-left: 1rem;
   width: 100%;
 }
-#sobre li {
+#sobre li,
+#feedback li {
   display: inline;
   margin-right: 1.5rem;
 }
-#sobre a {
+#sobre a,
+#feedback a {
   font-size: 3rem;
   color: #D3D3D3;
 }
 
+#feedback .container img {
+  margin-bottom: 0;
+}
+#feedback #foto .fotos-programas > img {
+  width: 40%;
+}
+#feedback .fotos-programas > img {
+  max-width: 300px;
+  display: block;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px #222;
+}
+#feedback #nossos-numeros img {
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px #222;
+}
+
 section#podcast,
-section#apoio {
+section#apoio,
+section#contato {
   background-color: #385045;
   padding-top: 2rem;
 }
@@ -435,6 +482,10 @@ footer a {
   color: #D3D3D3;
 }
 
+#feedback {
+  padding-bottom: 2rem;
+}
+
 @media (max-width: 767px) {
   .navbar-brand {
     font-weight: 700;
@@ -505,11 +556,12 @@ footer a {
     gap: 20px;
     align-items: center;
   }
-  #programas #foto .fotos-programas > img {
-    width: 80%;
+  #feedback #insta-conteudo {
+    flex-direction: column;
+    align-items: center;
   }
-  #programas .fotos-programas > img {
-    width: 75%;
+  #feedback #insta-conteudo #nossos-numeros {
+    width: 100%;
   }
   section#inicio .container {
     text-align: center;
@@ -523,8 +575,10 @@ footer a {
     flex-direction: column;
   }
   section#inicio h2 {
-    font-size: 40px;
+    font-size: 24px;
     font-weight: 700;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
   }
   section#inicio p {
     margin: 2rem 0;
@@ -532,7 +586,9 @@ footer a {
     font-size: 20px;
   }
   section#inicio img {
-    width: 300px;
+    width: 150px;
+    padding: 0 1rem;
+    padding-top: 0;
   }
   #patrocinadores img,
   #patrocinadores img#paletes {
@@ -541,7 +597,7 @@ footer a {
 }
 @media screen and (min-width: 990px) and (max-width: 1400px) {
   a.nav-link {
-    padding: 0.5rem;
+    padding: 0.4rem;
   }
   .logo-midias {
     display: flex;
@@ -562,18 +618,15 @@ footer a {
   }
 }
 @media screen and (max-width: 989px) {
-  #programas .fotos-programas > img {
+  #programas .fotos-programas > img, #feedback .fotos-programas > img {
     width: 50%;
   }
-  #programas #insta-conteudo {
+  #programas #insta-conteudo, #feedback #insta-conteudo {
     flex-direction: column;
     align-items: center;
   }
-  #programas #insta-conteudo #nossos-numeros {
+  #programas #insta-conteudo #nossos-numeros, #feedback #insta-conteudo #nossos-numeros {
     width: 100%;
-  }
-  #programas #insta-conteudo #nossos-numeros img {
-    width: 50%;
   }
 }
 

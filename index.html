@@ -38,7 +38,7 @@
 				<div class="logo-midias">
 					<a class="navbar-brand">
 						<img
-							src="./src/imgs/logo_papo_branco.png"
+							src="./src/imgs/logo_papo_preto.png"
 							alt="Logo Papo Paralello"
 							width="70"
 							height="70"
@@ -77,7 +77,7 @@
 					data-bs-toggle="collapse"
 					data-bs-target="#menu-navegacao"
 				>
-					<span class="navbar-toggler-icon"></span>
+					<span class="navbar-toggler-icon bs-navbar-toggler-icon-bg-light"></span>
 				</button>
 				<nav
 					class="navbar-collapse collapse justify-content-end"
@@ -109,6 +109,12 @@
 							</a>
 						</li>
 						<li class="nav-item fw-bold">
+							<a class="nav-link" data-offset="500" href="#feedback">
+								<i class="me-1 bi bi-person"></i>
+								Feedback
+							</a>
+						</li>
+						<li class="nav-item fw-bold">
 							<a class="nav-link" data-offset="500" href="#contato">
 								<i class="me-1 bi bi-envelope"></i>
 								Contato
@@ -120,35 +126,41 @@
 		</header>
 		<div class="corpo" data-bs-spy="scroll" data-bs-target="cabecalho">
 			<section id="inicio" class="d-flex">
-				<div id="inicioContainer" class="container d-flex justify-content-around">
-					<div class="texto col-md-8 col-sm-12">
-						<h2 class="">SOMOS O PODCAST DO MUNDO PSYTRANDE</h2>
-						<p>Vamos falar e mostrar de tudo da nossa cena.</p>
+				<div
+					id="inicioContainer"
+					class="container d-flex flex-column justify-content-around gy-3"
+				>
+					<div class="d-flex align-items-center justify-content-around">
 						<div
 							class="mb-2 d-flex gap-5 justify-content-center justify-content-md-start gx-3 align-items-top"
 						>
 							<a
 								id="seguidores-insta"
-								class="fs-3 text-decoration-none text-white d-flex align-items-center"
+								class="fs-1 text-decoration-none text-white d-flex flex-column align-items-center"
 								target="_blank"
 								href="https://www.instagram.com/papoparalello/"
-								><i class="bi bi-instagram fs-1 text-white me-2"></i></a
-							>
+								><i class="bi bi-instagram fs-1 text-white me-2"></i
+							></a>
+						</div>
+						<img
+							class="col-md-4 col-sm-12"
+							src="./src/imgs/logo_papo_branco.png"
+							alt="logo papo paralello"
+						/>
+						<div>
 							<a
 								id="seguidores-youtube"
-								class="fs-3 text-decoration-none text-white d-flex align-items-center"
+								class="fs-1 text-decoration-none text-white d-flex flex-column align-items-center"
 								target="_blank"
 								href="https://www.youtube.com/c/PAPOPARALELLO"
-								><i class="bi bi-youtube fs-1 text-white me-2"></i></a
-							>
+								><i class="bi bi-youtube fs-1 text-white me-2"></i
+							></a>
 						</div>
-						<button id="botao-inicio">Saiba mais</button>
 					</div>
-					<img
-						class="col-md-4 col-sm-12"
-						src="./src/imgs/logo_papo_branco.png"
-						alt="logo papo paralello"
-					/>
+					<div class="texto text-center col-md-8 col-sm-12 w-100">
+						<h2 class="">SOMOS O PODCAST DO MUNDO PSYTRANDE</h2>
+						<!-- <p>Vamos falar e mostrar de tudo da nossa cena.</p> -->
+					</div>
 				</div>
 			</section>
 			<div class="carousel slide" data-bs-ride="carousel" id="carousel">
@@ -181,9 +193,6 @@
 							alt="foto no podecast"
 						/>
 					</div>
-					<!-- <div data-bs-interval="3000" class="carousel-item">
-                    <img src="../src/imgs/carousel_2.jpg" class="img-fluid" alt="foto no podecast">
-                </div> -->
 					<div class="carousel-indicators">
 						<button
 							type="button"
@@ -206,7 +215,6 @@
 							data-bs-target="#carousel"
 							data-bs-slide-to="3"
 						></button>
-						<!-- <button type="button" data-bs-target="#carousel" data-bs-slide-to="4"></button> -->
 					</div>
 				</div>
 			</div>
@@ -244,29 +252,6 @@
 									elemento integrante e enriquecedor da cultura do psytrance,
 									enriquecendo a comunidade e fortalecendo os laços dentro dela.
 								</p>
-								<!-- <div class="col-md-9 col-sm-12 redes">
-                                <span>Confira nossas redes: </span>
-                                <ul>
-                                    <li>
-                                        <a target="_blank" href="https://www.instagram.com/papoparalello/"><i
-                                                class="bi bi-instagram"></i></a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="https://www.youtube.com/c/PAPOPARALELLO"><i
-                                                class="bi bi-youtube"></i></a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank"
-                                            href="https://open.spotify.com/show/5RuE3iEaAZ4b7dPhFyijY5"><i
-                                                class="bi bi-spotify"></i></a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank"
-                                            href="https://www.tiktok.com/@papoparalello?_t=8zqdp9d526y&_r=1"><i
-                                                class="bi bi-tiktok"></i></a>
-                                    </li>
-                                </ul>
-                            </div> -->
 							</div>
 						</div>
 					</div>
@@ -445,7 +430,7 @@
 								</div>
 								<div class="tab-pane" id="insta">
 									<div class="d-flex gap-5" id="insta-conteudo">
-										<div class="col-lg-6" id="feedback">
+										<div class="col-lg-6">
 											<h4 class="h3 pb-3 text-center">Feedback</h4>
 											<p>
 												Nosso perfil no intagram movimenta quando publicamos conteúdos ,
@@ -559,7 +544,6 @@
 				<div>
 					<div class="container">
 						<h3 class="mt-sm-0">APOIO</h3>
-						<!-- <h4 class="h5 pb-3">Nossos Parceiros:</h4> -->
 						<div
 							id="patrocinadores"
 							class="d-flex align-items-center justify-content-around pb-5"
@@ -572,46 +556,97 @@
 							<img src="./src/imgs/stone_ligth_logo.png" alt="logo stone ligth" />
 							<img src="./src/imgs/roletronic_logo.png" alt="logo roletronic" />
 						</div>
-						<!-- <h4 class="h5 pb-3">O Papo Paralello já fez parceria com:</h4> -->
 						<div class="marquee">
 							<ul class="marquee-content">
 								<li>
 									<span>Árvore da Vida </span>
-									<!-- <img src="https://www.placehold.co/100x50" alt=""> -->
 								</li>
 								<li>
 									<span>Flor da Vida </span>
-									<!-- <img src="https://www.placehold.co/100x50" alt=""> -->
-								</li>
-								<li>
-									<span>Xeque Mate </span>
-									<!-- <img src="https://www.placehold.co/100x50" alt=""> -->
 								</li>
 								<li>
 									<span>Baobá </span>
-									<!-- <img src="https://www.placehold.co/100x50" alt=""> -->
 								</li>
 								<li>
 									<span>Progressive </span>
-									<!-- <img src="https://www.placehold.co/100x50" alt=""> -->
 								</li>
 								<li>
 									<span>Mundo de Oz </span>
-									<!-- <img src="https://www.placehold.co/100x50" alt=""> -->
 								</li>
 								<li>
 									<span>Reveilloz </span>
-									<!-- <img src="https://www.placehold.co/100x50" alt=""> -->
 								</li>
 								<li>
 									<span>Ultra Brasil </span>
-									<!-- <img src="https://www.placehold.co/100x50" alt=""> -->
 								</li>
 								<li>
 									<span>Hitech Revolution </span>
-									<!-- <img src="https://www.placehold.co/100x50" alt=""> -->
 								</li>
 							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="feedback">
+				<div>
+					<div class="container">
+						<h3 class="mt-sm-0">FEEDBACKS</h3>
+						<div class="row align-items-top">
+							<div class="d-flex gap-5" id="insta-conteudo">
+								<div class="col-lg-6">
+									<h4 class="h3 pb-3 text-center">Público</h4>
+									<p>
+										Nosso perfil no intagram movimenta quando publicamos conteúdos ,
+										tanto stories quanto reels crescem os números de visualizações
+										consideravelmente.<br /><br />
+										Principalemte nas coberturas, temos muitos pedidos por esse tipo de
+										conteúdo e também muitos elogios por parte do público. Buscamos
+										trazer uma visão do que é o nosso trabalho como queremos impactar na
+										cena do psytrance.
+									</p>
+									<div class="fotos-programas d-flex justify-content-around flex-column align-items-center gap-3">
+										<img src="./src/imgs/insta_1.png" alt="comentarios instagram" />
+										<img src="./src/imgs/insta_2.png" alt="comentarios instagram" />
+									</div>
+								</div>
+								<div class="col-lg-5" id="nossos-numeros">
+									<h4 class="h3 pb-3 text-center">Nossos Números</h4>
+									<div class="d-flex flex-column gap-3 align-items-center">
+										<a
+											target="_blank"
+											href="https://www.instagram.com/reel/CsG15-7AFAO/"
+											><img
+												width="100%"
+												src="./src/imgs/numeros_1.png"
+												alt="numeros_visualizacoes"
+										/></a>
+										<a
+											target="_blank"
+											href="https://www.instagram.com/reel/CvFcr7ptC9t/"
+											><img
+												width="100%"
+												src="./src/imgs/numeros_2.png"
+												alt="numeros_visualizacoes"
+										/></a>
+										<a
+											target="_blank"
+											href="https://www.instagram.com/reel/C5_g1IkvDhE/"
+											><img
+												width="100%"
+												src="./src/imgs/numeros_3.png"
+												alt="numeros_visualizacoes"
+										/></a>
+										<a
+											target="_blank"
+											href="https://www.instagram.com/reel/C6l4-tnu9ys/"
+											><img
+												width="100%"
+												src="./src/imgs/numeros_4.png"
+												alt="numeros_visualizacoes"
+										/></a>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

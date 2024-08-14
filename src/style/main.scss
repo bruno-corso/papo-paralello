@@ -9,18 +9,18 @@ body {
 }
 
 .nav .nav-link,
-.navbar-brand,
-.navbar-brand:hover {
-    color: variaveis.$corClara;
+.navbar-brand {
+    color: #000;
+    font-size: 14px;
 }
 
 .navbar {
-    background-color: variaveis.$corBgNavBar;
+    background-color: #FFF;
     border-bottom: 0.5px solid variaveis.$corClara;
 
     .nav {
         .nav-link.active {
-            background-color: variaveis.$corDestaque;
+            background-color: #000;
             color: variaveis.$corClara;
         }
     }
@@ -39,8 +39,9 @@ body {
 }
 
 .navbar-toggler {
-    background-color: variaveis.$corDestaque;
+    background-color: #FFF;
 }
+
 
 .logo-midias {
     display: flex;
@@ -57,7 +58,7 @@ body {
 
             a {
                 font-size: 1.5rem;
-                color: variaveis.$corDestaque;
+                color: #000;
             }
         }
     }
@@ -66,13 +67,13 @@ body {
 section#inicio {
     margin: 0;
     // width: 100vw;
-    height: calc(100vh - 100px);
+    // height: calc(100vh - 100px);
     background-color: variaveis.$corBgNavBar;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%239C92AC' fill-opacity='0.05' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 
-    // #inicioContainer{
-    //     flex-direction: row;
-    // }
+    #inicioContainer {
+        margin-top: 2rem;
+    }
 
     .container {
         align-items: center;
@@ -87,8 +88,10 @@ section#inicio {
     }
 
     h2 {
-        font-size: 64px;
+        font-size: 48px;
         font-weight: 700;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
     }
 
     p {
@@ -113,16 +116,27 @@ section#inicio {
         }
     }
 
+    img {
+        padding-top: 2rem;
+    }
+
 
 
 }
 
 section#sobre,
 section#programas,
-section#contato {
+section#feedback {
     background-color: variaveis.$corBgEscuro1;
     padding-top: 2rem;
+
+    .nav .nav-link,
+    .navbar-brand,
+    .navbar-brand:hover {
+        color: variaveis.$corClara
+    }
 }
+
 
 .carousel {
     width: 100%;
@@ -144,7 +158,8 @@ section#contato {
 #podcast,
 #programas,
 #contato,
-#apoio {
+#apoio,
+#feedback {
     .container {
         h3 {
             font-weight: 700;
@@ -158,7 +173,8 @@ section#contato {
     }
 }
 
-#sobre {
+#sobre,
+#feedback {
 
     p,
     span {
@@ -200,8 +216,37 @@ section#contato {
     }
 }
 
+#feedback {
+    .container {
+
+        img {
+            margin-bottom: 0;
+        }
+    }
+
+    #foto .fotos-programas>img {
+        width: 40%;
+    }
+
+    .fotos-programas>img {
+        max-width: 300px;
+        display: block;
+        width: 100%;
+        border: 1px solid transparent;
+        border-radius: 10px;
+        box-shadow: 2px 2px 4px #222;
+    }
+
+    #nossos-numeros img {
+        border-radius: 10px;
+        box-shadow: 2px 2px 4px #222;
+    }
+
+}
+
 section#podcast,
-section#apoio {
+section#apoio,
+section#contato {
     background-color: variaveis.$corBgEscuro2;
     padding-top: 2rem;
 }
@@ -403,6 +448,16 @@ footer {
     }
 }
 
+#feedback {
+    padding-bottom: 2rem;
+}
+
+// ------------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------------
+
+
 @media (max-width: $layout-breakpoint) {
     .navbar-brand {
         font-weight: 700;
@@ -490,16 +545,23 @@ footer {
         align-items: center;
     }
 
-    
-    #programas {
 
-        #foto .fotos-programas>img {
-            width: 80%;
+    #feedback {
+
+
+        #insta-conteudo {
+            flex-direction: column;
+            align-items: center;
+
+            #nossos-numeros {
+                width: 100%;
+
+                // img {
+                //     width: 50%;
+                // }
+            }
         }
 
-        .fotos-programas>img {
-            width: 75%;
-        }
     }
 
 
@@ -519,8 +581,10 @@ footer {
         }
 
         h2 {
-            font-size: 40px;
+            font-size: 24px;
             font-weight: 700;
+            padding-top: 2rem;
+            padding-bottom: 1rem;
         }
 
         p {
@@ -530,7 +594,9 @@ footer {
         }
 
         img {
-            width: 300px;
+            width: 150px;
+            padding: 0 1rem;
+            padding-top: 0;
         }
     }
 
@@ -545,7 +611,7 @@ footer {
 @media screen and (min-width: 990px) and (max-width: 1400px) {
 
     a.nav-link {
-        padding: 0.5rem;
+        padding: 0.4rem;
     }
 
     .logo-midias {
@@ -573,7 +639,7 @@ footer {
 
 @media screen and (max-width: 989px) {
 
-    #programas {
+    #programas, #feedback {
         .fotos-programas>img {
             width: 50%;
         }
@@ -584,10 +650,6 @@ footer {
 
             #nossos-numeros {
                 width: 100%;
-
-                img {
-                    width: 50%;
-                }
             }
         }
 

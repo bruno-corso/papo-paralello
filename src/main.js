@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	vForm.addEventListener('submit', function (e) {
 		e.preventDefault()
-		toastSuccess()
+		// toastSuccess()
 
 		const vNome = document.getElementById('nome').value
 		const vEmail = document.getElementById('email').value
@@ -60,12 +60,13 @@ async function numerosYTB() {
 	}
 
 	try {
-		const response = await fetch(url, options)
-		const result = await response.json()
-		console.log(result)
+		// const response = await fetch(url, options)
+		// const result = await response.json()
+		// console.log(result)
 		var elemento = document.getElementById('seguidores-youtube')
 		if (elemento) {
-			elemento.innerHTML += result.subscriberCountText
+			// elemento.innerHTML += result.subscriberCountText
+			elemento.innerHTML += "50.50K"
 		}
 	} catch (error) {
 		console.error(error)
@@ -84,13 +85,14 @@ async function numerosInsta() {
 	}
 
 	try {
-		const response = await fetch(url, options)
-		const result = await response.json()
-		console.log(result)
-        var seguidores = formatNumber(result.data.follower_count)
+		// const response = await fetch(url, options)
+		// const result = await response.json()
+		// console.log(result)
+        // var seguidores = formatNumber(result.data.follower_count)
 		var elemento = document.getElementById('seguidores-insta')
 		if (elemento) {
-			elemento.innerHTML += seguidores
+			// elemento.innerHTML += seguidores
+			elemento.innerHTML += "50.50K"
 		}
 	} catch (error) {
 		console.error(error)
